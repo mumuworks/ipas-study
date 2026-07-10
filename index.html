@@ -641,118 +641,6 @@
 
   <div class="section-title"><span class="num">科1</span>人工智慧基礎概論</div>
 
-  <div class="section-title sub"><span class="num">⬡</span>資料處理</div>
-
-  <details class="vocab">
-    <summary><span class="v-name">資料整合</span><span class="v-en">Data Integration</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>把散在不同系統的資料（表單、報表、資料庫）合併成一份可用的完整資料。</div>
-      <div class="term-row"><span class="label">常考法</span>「多個來源的客戶資料要合併分析，第一步做什麼？」→ 資料整合。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">把「資料整合」和「資料清理」順序考你：整合是合併來源，清理是處理錯誤值。</span></div>
-      <div class="term-row"><span class="label">實務</span>灶囍：Google Form 訂單、對帳表、客戶名單三張 Sheet 彙整成一張總表。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">資料清理</span><span class="v-en">Data Cleaning</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>處理缺漏值、重複值、格式錯誤、異常值，讓資料能被模型正確使用。</div>
-      <div class="term-row"><span class="label">常考法</span>「資料有缺值與重複紀錄，應先進行？」→ 資料清理／前處理。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「直接丟進模型訓練，模型會自己處理」→ 錯，髒資料會直接影響模型品質。</span></div>
-      <div class="term-row"><span class="label">實務</span>訂單 Sheet 裡電話格式不一、姓名重複下單，先用 Apps Script 清理再統計。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">資料洩漏</span><span class="v-en">Data Leakage</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>訓練時「偷看」到測試集的資訊，讓模型評估分數虛高，上線就掉漆。</div>
-      <div class="term-row"><span class="label">常考法</span>「標準化應如何避免資料洩漏？」→ 先切訓練／測試集，只用訓練集算統計量。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「先對全部資料標準化再分割」看起來最直覺，卻是標準錯誤答案。</span></div>
-      <div class="term-row"><span class="label">實務</span>像面試前偷看考題：分數漂亮但不代表真實實力。口訣：先切再算。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">結構化資料</span><span class="v-en">Structured Data</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>有固定欄位、能放進表格的資料，例如訂單編號、金額、日期。</div>
-      <div class="term-row"><span class="label">常考法</span>給情境（ERP 訂單、感測器數值）問屬於哪種資料型態。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">把「存在資料庫裡」當判斷標準 → 錯，重點是有沒有固定欄位結構。</span></div>
-      <div class="term-row"><span class="label">實務</span>灶囍訂單 Google Sheet：每列一筆訂單、每欄一個欄位，就是結構化資料。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">非結構化資料</span><span class="v-en">Unstructured Data</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>沒有固定欄位的資料：文字對話、圖片、語音、影片、PDF 掃描檔。</div>
-      <div class="term-row"><span class="label">常考法</span>「客服對話紀錄、產品照片屬於？」→ 非結構化資料。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">把 JSON/XML 當非結構化 → 錯，那是半結構化。</span></div>
-      <div class="term-row"><span class="label">實務</span>客人 LINE 留言「我要上次那個口味兩盒」就是非結構化資料，需 AI 解讀。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">半結構化資料</span><span class="v-en">Semi-structured Data</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>有標籤、有層次但不是固定表格，例如 JSON、XML、HTML。</div>
-      <div class="term-row"><span class="label">常考法</span>「JSON 格式的 API 回傳資料屬於？」→ 半結構化。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">三選一陷阱：JSON 常被誤放到「結構化」或「非結構化」選項。</span></div>
-      <div class="term-row"><span class="label">實務</span>Apps Script 呼叫 API 收到的 JSON 回傳，就是半結構化資料。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">正規化</span><span class="v-en">Normalization</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>把數值壓縮到固定範圍（常見 0～1），讓不同單位的欄位可以比較。</div>
-      <div class="term-row"><span class="label">常考法</span>「將特徵縮放到 0～1 之間」→ 正規化（Min-Max）。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">與標準化互換出題：0～1 是正規化；平均0、標準差1 是標準化。</span></div>
-      <div class="term-row"><span class="label">實務</span>訂單金額（幾百元）和購買次數（個位數）要一起分析，先縮到同一尺度。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">標準化</span><span class="v-en">Standardization</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>把數值轉成「平均 0、標準差 1」的分布，常用 Z-score。</div>
-      <div class="term-row"><span class="label">常考法</span>與 Data Leakage 合考：標準化統計量只能用訓練集計算。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「標準化＝把資料變成 0～1」→ 錯，那是正規化。</span></div>
-      <div class="term-row"><span class="label">實務</span>像把不同部門的考核分數換算成全公司的相對位置（高於或低於平均多少）。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">獨熱編碼</span><span class="v-en">One-hot Encoding</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>把類別型資料（職業、地區）拆成多個 0/1 欄位，避免模型誤會有大小順序。</div>
-      <div class="term-row"><span class="label">常考法</span>「職業、資費方案等無序類別資料應如何編碼？」→ One-hot。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">用 Label Encoding 給無序類別編 1、2、3 → 模型會誤以為 3 &gt; 1。</span></div>
-      <div class="term-row"><span class="label">實務</span>灶囍口味欄「原味／芝麻／花生」拆成三個 0/1 欄位，而不是編 1、2、3。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">標籤編碼</span><span class="v-en">Label Encoding</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>把類別直接換成整數（小=1、中=2、大=3），適合「有順序」的類別。</div>
-      <div class="term-row"><span class="label">常考法</span>「教育程度（高中／大學／碩士）適合哪種編碼？」→ Label Encoding（有序）。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">對「無順序」類別用 Label Encoding，選項會包裝成「比較省欄位」誘你選。</span></div>
-      <div class="term-row"><span class="label">實務</span>禮盒尺寸小／中／大有大小關係，可用 1/2/3；口味沒有，要用 One-hot。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">SMOTE 合成少數類別過採樣</span><span class="v-en">SMOTE</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>當某類樣本太少（如詐欺案例），用演算法「合成」新的少數類別樣本來平衡。</div>
-      <div class="term-row"><span class="label">常考法</span>「詐欺樣本僅占 1%，如何處理類別不平衡？」→ SMOTE。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「直接複製少數樣本」或「刪掉多數樣本就好」→ SMOTE 是合成新樣本，不是複製。</span></div>
-      <div class="term-row"><span class="label">實務</span>離職預測：離職者只占 5%，直接訓練模型會全猜「不離職」，需先平衡樣本。</div>
-    </div>
-  </details>
-
   <div class="section-title sub"><span class="num">⬡</span>機器學習</div>
 
   <details class="vocab">
@@ -1026,26 +914,6 @@
       <div class="term-row"><span class="label">常考法</span>「AI 決策錯誤時應由誰負責、如何申訴」→ 問責性。</div>
       <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「是 AI 判斷的，所以沒有人需要負責」→ 必錯選項。</span></div>
       <div class="term-row"><span class="label">實務</span>AI 初審履歷被誤刷，求職者要有管道申訴、由人資重新人工審查。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">隱私</span><span class="v-en">Privacy</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>保護「個人資料」不被過度蒐集、濫用，蒐集要有目的與同意。</div>
-      <div class="term-row"><span class="label">常考法</span>「訓練資料含個資，應如何處理？」→ 去識別化、最小化蒐集、取得同意。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">隱私 vs 安全：隱私管「該不該用這筆個資」，安全管「資料會不會被偷被改」。</span></div>
-      <div class="term-row"><span class="label">實務</span>把員工資料丟給公開 AI 工具分析前，要先去識別化，這是隱私問題。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">安全性</span><span class="v-en">Security</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>保護系統與資料不被「攻擊、竊取、竄改」，如加密、權限控管。</div>
-      <div class="term-row"><span class="label">常考法</span>「防止模型或資料遭未授權存取」→ 安全性。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">Prompt Injection 屬於安全問題，不是模型幻覺，兩者常互為誘答。</span></div>
-      <div class="term-row"><span class="label">實務</span>灶囍後端重新驗證金額、店家登入才能看訂單，都是安全性設計。</div>
     </div>
   </details>
 
@@ -1371,46 +1239,6 @@
     </div>
   </details>
 
-  <details class="vocab">
-    <summary><span class="v-name">資料治理</span><span class="v-en">Data Governance</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>管理資料「誰負責、怎麼用、品質標準、生命週期」的整套制度。</div>
-      <div class="term-row"><span class="label">常考法</span>「確保資料品質、權責與合規使用的管理機制」→ 資料治理。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">與資料安全混淆：治理是「管理制度」層級，安全是「防護技術」層級。</span></div>
-      <div class="term-row"><span class="label">實務</span>規定客戶名單由誰維護、多久清理、誰能存取，就是資料治理。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">存取控制</span><span class="v-en">Access Control</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>限制「誰能看、誰能改」哪些資料，通常搭配身分驗證與角色權限。</div>
-      <div class="term-row"><span class="label">常考法</span>「不同角色只能存取職務所需資料」→ 存取控制。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「內部員工都可信任，不需權限區分」→ 必錯選項。</span></div>
-      <div class="term-row"><span class="label">實務</span>灶囍：店家登入後才能查看訂單，客人只能看自己的訂單。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">最小權限原則</span><span class="v-en">Least Privilege</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>只給「完成工作所需的最低權限」，多的不給，離職或調職就收回。</div>
-      <div class="term-row"><span class="label">常考法</span>「新進人員應授予何種權限範圍？」→ 僅職務所需的最小權限。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「先全開比較方便，之後再限縮」→ 必錯，方向相反。</span></div>
-      <div class="term-row"><span class="label">實務</span>工讀生只能「新增」訂單，不能「刪除」或看營收報表。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">資料完整性</span><span class="v-en">Data Integrity</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>確保資料在傳輸與儲存過程「沒有被竄改或損壞」，是正確且一致的。</div>
-      <div class="term-row"><span class="label">常考法</span>「前端送來的金額不可直接信任，應如何處理？」→ 後端驗證重算（維護完整性）。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">與機密性混淆：完整性防「被改」，機密性防「被看」。</span></div>
-      <div class="term-row"><span class="label">實務</span>灶囍後端重新計算訂單金額，不信任前端傳來的數字。</div>
-    </div>
-  </details>
-
   <!-- ===================== 4. 易混淆名詞比較 ===================== -->
   <div class="chapter-divider" id="compare-section">
     <span class="ch-num">4</span><span class="ch-title">易混淆名詞比較</span>
@@ -1446,36 +1274,6 @@
     </div>
     <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">「預測客戶會不會流失」放回歸當誘答（其實是分類）；「客戶分群」放分類當誘答（其實是非監督分群）。</span></div>
     <div class="mnemonic">類別→分類；數字→回歸；沒答案自己分→分群。</div>
-  </div>
-
-  <div class="term-card">
-    <div class="tc-head"><span class="tc-name">④ One-hot Encoding vs Label Encoding</span></div>
-    <div class="compare-box">
-      <div class="compare-item"><div class="ci-head">One-hot</div>拆成多個 0/1 欄位，適合「無順序」類別（職業、地區）。</div>
-      <div class="compare-item"><div class="ci-head">Label</div>直接編整數 1、2、3，適合「有順序」類別（小/中/大）。</div>
-    </div>
-    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">對「無順序」的職業、地區用 Label Encoding → 模型會誤以為 3 &gt; 1 有大小關係。</span></div>
-    <div class="mnemonic">無序用 One-hot，有序才用 Label。</div>
-  </div>
-
-  <div class="term-card">
-    <div class="tc-head"><span class="tc-name">⑤ Normalization vs Standardization</span></div>
-    <div class="compare-box">
-      <div class="compare-item"><div class="ci-head">正規化</div>壓到固定範圍，常見 0～1（Min-Max）。</div>
-      <div class="compare-item"><div class="ci-head">標準化</div>轉成平均 0、標準差 1（Z-score）。</div>
-    </div>
-    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">兩個定義互換出題；再加一層：統計量必須「只用訓練集」計算，否則就是 Data Leakage。</span></div>
-    <div class="mnemonic">0～1＝正規化；平均0標差1＝標準化；先切再算。</div>
-  </div>
-
-  <div class="term-card">
-    <div class="tc-head"><span class="tc-name">⑥ Training Data vs Test Data</span></div>
-    <div class="compare-box">
-      <div class="compare-item"><div class="ci-head">訓練資料</div>教模型用的教材與練習題。</div>
-      <div class="compare-item"><div class="ci-head">測試資料</div>模型沒看過的正式考卷，用來評估真實實力。</div>
-    </div>
-    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">「用訓練資料評估模型」「讓測試資料參與訓練」→ 都是必錯，後者就是 Data Leakage。</span></div>
-    <div class="mnemonic">練習題拿來學，考卷不能先看。</div>
   </div>
 
   <div class="term-card">
@@ -1526,27 +1324,6 @@
     </div>
     <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">把兩者的「彈性」與「門檻」描述互換；或用「Low Code 完全不需程式知識」當誘答。</span></div>
     <div class="mnemonic">完全不碼＝No Code；少量寫碼＝Low Code。</div>
-  </div>
-
-  <div class="term-card">
-    <div class="tc-head"><span class="tc-name">⑫ Data Privacy vs Data Security vs Data Governance</span></div>
-    <div class="compare-box">
-      <div class="compare-item"><div class="ci-head">隱私</div>個資「該不該蒐集、能不能這樣用」：同意、目的、去識別化。</div>
-      <div class="compare-item"><div class="ci-head">安全</div>資料「會不會被偷、被改」：加密、防護、權限技術。</div>
-      <div class="compare-item"><div class="ci-head">治理</div>資料的「管理制度」：權責、品質標準、生命週期、合規。</div>
-    </div>
-    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">「資料有加密所以符合隱私規範」→ 錯，加密是安全手段，隱私還要看蒐集目的與同意。</span></div>
-    <div class="mnemonic">隱私管「該不該用」，安全管「守不守得住」，治理管「整套制度」。</div>
-  </div>
-
-  <div class="term-card">
-    <div class="tc-head"><span class="tc-name">⑬ Access Control vs Least Privilege</span></div>
-    <div class="compare-box">
-      <div class="compare-item"><div class="ci-head">存取控制</div>「機制」：驗證身分、依角色決定誰能看誰能改。</div>
-      <div class="compare-item"><div class="ci-head">最小權限</div>「原則」：只給完成工作所需的最低權限，多的不給。</div>
-    </div>
-    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">「先開放全部權限，日後再限縮比較方便」→ 必錯，與最小權限原則方向相反。</span></div>
-    <div class="mnemonic">存取控制是門鎖，最小權限是「只給需要的鑰匙」。</div>
   </div>
 
   <div class="term-card">
@@ -1635,30 +1412,6 @@
   </div>
 
   <div class="term-card">
-    <div class="tc-head"><span class="tc-name">題型01｜Data Leakage</span><span class="tc-en">資料洩漏</span></div>
-    <div class="term-row"><span class="label">常見情境</span>題目描述標準化、訓練資料、測試資料的處理順序。</div>
-    <div class="term-row"><span class="label">正確判斷</span>先切訓練／測試集，再「只用訓練資料」計算統計量，套用到測試集。</div>
-    <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「先對整份資料標準化再分割」→ 看起來直覺，其實就是洩漏。</span></div>
-    <div class="term-row"><span class="label">記憶</span><span class="mnemonic">先切再算，不能全算。</span></div>
-  </div>
-
-  <div class="term-card">
-    <div class="tc-head"><span class="tc-name">題型02｜SMOTE</span><span class="tc-en">類別不平衡</span></div>
-    <div class="term-row"><span class="label">常見情境</span>詐欺樣本太少、離職者只占少數、正負樣本嚴重不平衡。</div>
-    <div class="term-row"><span class="label">正確判斷</span>SMOTE 用演算法「合成」少數類別的新樣本來平衡資料。</div>
-    <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「直接複製少數樣本」「刪光多數樣本」「不平衡不影響模型」。</span></div>
-    <div class="term-row"><span class="label">記憶</span><span class="mnemonic">少數太少 → 合成新樣本。</span></div>
-  </div>
-
-  <div class="term-card">
-    <div class="tc-head"><span class="tc-name">題型03｜One-hot Encoding</span><span class="tc-en">類別編碼</span></div>
-    <div class="term-row"><span class="label">常見情境</span>職業、地區、資費方案等「無順序」的類別型資料要進模型。</div>
-    <div class="term-row"><span class="label">正確判斷</span>轉成多個 0/1 欄位，避免模型誤會類別有大小順序。</div>
-    <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「用 1、2、3 編碼比較省欄位」→ 會讓模型以為 3 &gt; 1。</span></div>
-    <div class="term-row"><span class="label">記憶</span><span class="mnemonic">無序類別 → 拆成 0/1。</span></div>
-  </div>
-
-  <div class="term-card">
     <div class="tc-head"><span class="tc-name">題型04｜Unsupervised Learning</span><span class="tc-en">非監督式</span></div>
     <div class="term-row"><span class="label">常見情境</span>資料「沒有標籤」、想找出客戶分群、事先不知道分類標準。</div>
     <div class="term-row"><span class="label">正確判斷</span>沒有標準答案可對照，模型自己找結構（分群），無法直接判斷對錯。</div>
@@ -1718,13 +1471,6 @@
   <div class="chapter-divider" id="case-section">
     <span class="ch-num">6</span><span class="ch-title">實務案例對照</span>
     <span class="ch-code">用自己做過的三個專案，記住考點</span>
-  </div>
-
-  <div class="term-card">
-    <div class="tc-head"><span class="tc-name">案例①｜灶囍訂購系統</span></div>
-    <div class="term-row"><span class="label">專案情境</span>Google Form 接單、Google Sheet 存資料、Apps Script 寫少量程式、GitHub Pages 部署前台；店家登入才能看訂單，後端重算金額。</div>
-    <div class="term-row"><span class="label">對應考點</span>Low Code、Structured Data（訂單表格）、Access Control（登入權限）、Data Integrity（後端重算金額）、GitHub Pages、Apps Script、MVP（先做接單核心功能）。</div>
-    <div class="term-row"><span class="label">記憶</span><span class="mnemonic">灶囍＝Low Code 實戰：表格資料＋權限＋後端把關＋先做最小版本。</span></div>
   </div>
 
   <div class="term-card">
@@ -2417,6 +2163,266 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="section-title sub"><span class="num">⬡</span>L112 必背名詞補強</div>
+
+  <details class="vocab">
+    <summary><span class="v-name">資料整合</span><span class="v-en">Data Integration</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>把散在不同系統的資料（表單、報表、資料庫）合併成一份可用的完整資料。</div>
+      <div class="term-row"><span class="label">常考法</span>「多個來源的客戶資料要合併分析，第一步做什麼？」→ 資料整合。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">把「資料整合」和「資料清理」順序考你：整合是合併來源，清理是處理錯誤值。</span></div>
+      <div class="term-row"><span class="label">實務</span>灶囍：Google Form 訂單、對帳表、客戶名單三張 Sheet 彙整成一張總表。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">資料清理</span><span class="v-en">Data Cleaning</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>處理缺漏值、重複值、格式錯誤、異常值，讓資料能被模型正確使用。</div>
+      <div class="term-row"><span class="label">常考法</span>「資料有缺值與重複紀錄，應先進行？」→ 資料清理／前處理。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「直接丟進模型訓練，模型會自己處理」→ 錯，髒資料會直接影響模型品質。</span></div>
+      <div class="term-row"><span class="label">實務</span>訂單 Sheet 裡電話格式不一、姓名重複下單，先用 Apps Script 清理再統計。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">資料洩漏</span><span class="v-en">Data Leakage</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>訓練時「偷看」到測試集的資訊，讓模型評估分數虛高，上線就掉漆。</div>
+      <div class="term-row"><span class="label">常考法</span>「標準化應如何避免資料洩漏？」→ 先切訓練／測試集，只用訓練集算統計量。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「先對全部資料標準化再分割」看起來最直覺，卻是標準錯誤答案。</span></div>
+      <div class="term-row"><span class="label">實務</span>像面試前偷看考題：分數漂亮但不代表真實實力。口訣：先切再算。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">結構化資料</span><span class="v-en">Structured Data</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>有固定欄位、能放進表格的資料，例如訂單編號、金額、日期。</div>
+      <div class="term-row"><span class="label">常考法</span>給情境（ERP 訂單、感測器數值）問屬於哪種資料型態。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">把「存在資料庫裡」當判斷標準 → 錯，重點是有沒有固定欄位結構。</span></div>
+      <div class="term-row"><span class="label">實務</span>灶囍訂單 Google Sheet：每列一筆訂單、每欄一個欄位，就是結構化資料。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">非結構化資料</span><span class="v-en">Unstructured Data</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>沒有固定欄位的資料：文字對話、圖片、語音、影片、PDF 掃描檔。</div>
+      <div class="term-row"><span class="label">常考法</span>「客服對話紀錄、產品照片屬於？」→ 非結構化資料。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">把 JSON/XML 當非結構化 → 錯，那是半結構化。</span></div>
+      <div class="term-row"><span class="label">實務</span>客人 LINE 留言「我要上次那個口味兩盒」就是非結構化資料，需 AI 解讀。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">半結構化資料</span><span class="v-en">Semi-structured Data</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>有標籤、有層次但不是固定表格，例如 JSON、XML、HTML。</div>
+      <div class="term-row"><span class="label">常考法</span>「JSON 格式的 API 回傳資料屬於？」→ 半結構化。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">三選一陷阱：JSON 常被誤放到「結構化」或「非結構化」選項。</span></div>
+      <div class="term-row"><span class="label">實務</span>Apps Script 呼叫 API 收到的 JSON 回傳，就是半結構化資料。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">正規化</span><span class="v-en">Normalization</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>把數值壓縮到固定範圍（常見 0～1），讓不同單位的欄位可以比較。</div>
+      <div class="term-row"><span class="label">常考法</span>「將特徵縮放到 0～1 之間」→ 正規化（Min-Max）。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">與標準化互換出題：0～1 是正規化；平均0、標準差1 是標準化。</span></div>
+      <div class="term-row"><span class="label">實務</span>訂單金額（幾百元）和購買次數（個位數）要一起分析，先縮到同一尺度。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">標準化</span><span class="v-en">Standardization</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>把數值轉成「平均 0、標準差 1」的分布，常用 Z-score。</div>
+      <div class="term-row"><span class="label">常考法</span>與 Data Leakage 合考：標準化統計量只能用訓練集計算。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「標準化＝把資料變成 0～1」→ 錯，那是正規化。</span></div>
+      <div class="term-row"><span class="label">實務</span>像把不同部門的考核分數換算成全公司的相對位置（高於或低於平均多少）。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">獨熱編碼</span><span class="v-en">One-hot Encoding</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>把類別型資料（職業、地區）拆成多個 0/1 欄位，避免模型誤會有大小順序。</div>
+      <div class="term-row"><span class="label">常考法</span>「職業、資費方案等無序類別資料應如何編碼？」→ One-hot。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">用 Label Encoding 給無序類別編 1、2、3 → 模型會誤以為 3 &gt; 1。</span></div>
+      <div class="term-row"><span class="label">實務</span>灶囍口味欄「原味／芝麻／花生」拆成三個 0/1 欄位，而不是編 1、2、3。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">標籤編碼</span><span class="v-en">Label Encoding</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>把類別直接換成整數（小=1、中=2、大=3），適合「有順序」的類別。</div>
+      <div class="term-row"><span class="label">常考法</span>「教育程度（高中／大學／碩士）適合哪種編碼？」→ Label Encoding（有序）。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">對「無順序」類別用 Label Encoding，選項會包裝成「比較省欄位」誘你選。</span></div>
+      <div class="term-row"><span class="label">實務</span>禮盒尺寸小／中／大有大小關係，可用 1/2/3；口味沒有，要用 One-hot。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">SMOTE 合成少數類別過採樣</span><span class="v-en">SMOTE</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>當某類樣本太少（如詐欺案例），用演算法「合成」新的少數類別樣本來平衡。</div>
+      <div class="term-row"><span class="label">常考法</span>「詐欺樣本僅占 1%，如何處理類別不平衡？」→ SMOTE。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「直接複製少數樣本」或「刪掉多數樣本就好」→ SMOTE 是合成新樣本，不是複製。</span></div>
+      <div class="term-row"><span class="label">實務</span>離職預測：離職者只占 5%，直接訓練模型會全猜「不離職」，需先平衡樣本。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">隱私</span><span class="v-en">Privacy</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>保護「個人資料」不被過度蒐集、濫用，蒐集要有目的與同意。</div>
+      <div class="term-row"><span class="label">常考法</span>「訓練資料含個資，應如何處理？」→ 去識別化、最小化蒐集、取得同意。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">隱私 vs 安全：隱私管「該不該用這筆個資」，安全管「資料會不會被偷被改」。</span></div>
+      <div class="term-row"><span class="label">實務</span>把員工資料丟給公開 AI 工具分析前，要先去識別化，這是隱私問題。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">安全性</span><span class="v-en">Security</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>保護系統與資料不被「攻擊、竊取、竄改」，如加密、權限控管。</div>
+      <div class="term-row"><span class="label">常考法</span>「防止模型或資料遭未授權存取」→ 安全性。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">Prompt Injection 屬於安全問題，不是模型幻覺，兩者常互為誘答。</span></div>
+      <div class="term-row"><span class="label">實務</span>灶囍後端重新驗證金額、店家登入才能看訂單，都是安全性設計。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">資料治理</span><span class="v-en">Data Governance</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>管理資料「誰負責、怎麼用、品質標準、生命週期」的整套制度。</div>
+      <div class="term-row"><span class="label">常考法</span>「確保資料品質、權責與合規使用的管理機制」→ 資料治理。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">與資料安全混淆：治理是「管理制度」層級，安全是「防護技術」層級。</span></div>
+      <div class="term-row"><span class="label">實務</span>規定客戶名單由誰維護、多久清理、誰能存取，就是資料治理。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">存取控制</span><span class="v-en">Access Control</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>限制「誰能看、誰能改」哪些資料，通常搭配身分驗證與角色權限。</div>
+      <div class="term-row"><span class="label">常考法</span>「不同角色只能存取職務所需資料」→ 存取控制。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「內部員工都可信任，不需權限區分」→ 必錯選項。</span></div>
+      <div class="term-row"><span class="label">實務</span>灶囍：店家登入後才能查看訂單，客人只能看自己的訂單。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">最小權限原則</span><span class="v-en">Least Privilege</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>只給「完成工作所需的最低權限」，多的不給，離職或調職就收回。</div>
+      <div class="term-row"><span class="label">常考法</span>「新進人員應授予何種權限範圍？」→ 僅職務所需的最小權限。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「先全開比較方便，之後再限縮」→ 必錯，方向相反。</span></div>
+      <div class="term-row"><span class="label">實務</span>工讀生只能「新增」訂單，不能「刪除」或看營收報表。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">資料完整性</span><span class="v-en">Data Integrity</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>確保資料在傳輸與儲存過程「沒有被竄改或損壞」，是正確且一致的。</div>
+      <div class="term-row"><span class="label">常考法</span>「前端送來的金額不可直接信任，應如何處理？」→ 後端驗證重算（維護完整性）。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">與機密性混淆：完整性防「被改」，機密性防「被看」。</span></div>
+      <div class="term-row"><span class="label">實務</span>灶囍後端重新計算訂單金額，不信任前端傳來的數字。</div>
+    </div>
+  </details>
+
+  <div class="section-title sub"><span class="num">⬡</span>L112 易混淆比較</div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">④ One-hot Encoding vs Label Encoding</span></div>
+    <div class="compare-box">
+      <div class="compare-item"><div class="ci-head">One-hot</div>拆成多個 0/1 欄位，適合「無順序」類別（職業、地區）。</div>
+      <div class="compare-item"><div class="ci-head">Label</div>直接編整數 1、2、3，適合「有順序」類別（小/中/大）。</div>
+    </div>
+    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">對「無順序」的職業、地區用 Label Encoding → 模型會誤以為 3 &gt; 1 有大小關係。</span></div>
+    <div class="mnemonic">無序用 One-hot，有序才用 Label。</div>
+  </div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">⑤ Normalization vs Standardization</span></div>
+    <div class="compare-box">
+      <div class="compare-item"><div class="ci-head">正規化</div>壓到固定範圍，常見 0～1（Min-Max）。</div>
+      <div class="compare-item"><div class="ci-head">標準化</div>轉成平均 0、標準差 1（Z-score）。</div>
+    </div>
+    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">兩個定義互換出題；再加一層：統計量必須「只用訓練集」計算，否則就是 Data Leakage。</span></div>
+    <div class="mnemonic">0～1＝正規化；平均0標差1＝標準化；先切再算。</div>
+  </div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">⑥ Training Data vs Test Data</span></div>
+    <div class="compare-box">
+      <div class="compare-item"><div class="ci-head">訓練資料</div>教模型用的教材與練習題。</div>
+      <div class="compare-item"><div class="ci-head">測試資料</div>模型沒看過的正式考卷，用來評估真實實力。</div>
+    </div>
+    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">「用訓練資料評估模型」「讓測試資料參與訓練」→ 都是必錯，後者就是 Data Leakage。</span></div>
+    <div class="mnemonic">練習題拿來學，考卷不能先看。</div>
+  </div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">⑫ Data Privacy vs Data Security vs Data Governance</span></div>
+    <div class="compare-box">
+      <div class="compare-item"><div class="ci-head">隱私</div>個資「該不該蒐集、能不能這樣用」：同意、目的、去識別化。</div>
+      <div class="compare-item"><div class="ci-head">安全</div>資料「會不會被偷、被改」：加密、防護、權限技術。</div>
+      <div class="compare-item"><div class="ci-head">治理</div>資料的「管理制度」：權責、品質標準、生命週期、合規。</div>
+    </div>
+    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">「資料有加密所以符合隱私規範」→ 錯，加密是安全手段，隱私還要看蒐集目的與同意。</span></div>
+    <div class="mnemonic">隱私管「該不該用」，安全管「守不守得住」，治理管「整套制度」。</div>
+  </div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">⑬ Access Control vs Least Privilege</span></div>
+    <div class="compare-box">
+      <div class="compare-item"><div class="ci-head">存取控制</div>「機制」：驗證身分、依角色決定誰能看誰能改。</div>
+      <div class="compare-item"><div class="ci-head">最小權限</div>「原則」：只給完成工作所需的最低權限，多的不給。</div>
+    </div>
+    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">「先開放全部權限，日後再限縮比較方便」→ 必錯，與最小權限原則方向相反。</span></div>
+    <div class="mnemonic">存取控制是門鎖，最小權限是「只給需要的鑰匙」。</div>
+  </div>
+
+  <div class="section-title sub"><span class="num">⬡</span>L112 官方題型</div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">題型01｜Data Leakage</span><span class="tc-en">資料洩漏</span></div>
+    <div class="term-row"><span class="label">常見情境</span>題目描述標準化、訓練資料、測試資料的處理順序。</div>
+    <div class="term-row"><span class="label">正確判斷</span>先切訓練／測試集，再「只用訓練資料」計算統計量，套用到測試集。</div>
+    <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「先對整份資料標準化再分割」→ 看起來直覺，其實就是洩漏。</span></div>
+    <div class="term-row"><span class="label">記憶</span><span class="mnemonic">先切再算，不能全算。</span></div>
+  </div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">題型02｜SMOTE</span><span class="tc-en">類別不平衡</span></div>
+    <div class="term-row"><span class="label">常見情境</span>詐欺樣本太少、離職者只占少數、正負樣本嚴重不平衡。</div>
+    <div class="term-row"><span class="label">正確判斷</span>SMOTE 用演算法「合成」少數類別的新樣本來平衡資料。</div>
+    <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「直接複製少數樣本」「刪光多數樣本」「不平衡不影響模型」。</span></div>
+    <div class="term-row"><span class="label">記憶</span><span class="mnemonic">少數太少 → 合成新樣本。</span></div>
+  </div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">題型03｜One-hot Encoding</span><span class="tc-en">類別編碼</span></div>
+    <div class="term-row"><span class="label">常見情境</span>職業、地區、資費方案等「無順序」的類別型資料要進模型。</div>
+    <div class="term-row"><span class="label">正確判斷</span>轉成多個 0/1 欄位，避免模型誤會類別有大小順序。</div>
+    <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「用 1、2、3 編碼比較省欄位」→ 會讓模型以為 3 &gt; 1。</span></div>
+    <div class="term-row"><span class="label">記憶</span><span class="mnemonic">無序類別 → 拆成 0/1。</span></div>
+  </div>
+
+  <div class="section-title sub"><span class="num">⬡</span>L112 實務案例</div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">案例①｜灶囍訂購系統</span></div>
+    <div class="term-row"><span class="label">專案情境</span>Google Form 接單、Google Sheet 存資料、Apps Script 寫少量程式、GitHub Pages 部署前台；店家登入才能看訂單，後端重算金額。</div>
+    <div class="term-row"><span class="label">對應考點</span>Low Code、Structured Data（訂單表格）、Access Control（登入權限）、Data Integrity（後端重算金額）、GitHub Pages、Apps Script、MVP（先做接單核心功能）。</div>
+    <div class="term-row"><span class="label">記憶</span><span class="mnemonic">灶囍＝Low Code 實戰：表格資料＋權限＋後端把關＋先做最小版本。</span></div>
   </div>
 
   <!-- ===================== 三、L113 ===================== -->
