@@ -350,6 +350,109 @@
     color: var(--ink);
     margin: 18px 4px 10px;
   }
+  .chapter-quiz{
+    background: #FBFAFE;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 18px 0 22px;
+  }
+  .chapter-quiz .quiz-card,
+  .mock-exam .quiz-card{
+    box-shadow: none;
+    border: 1px solid var(--line);
+  }
+  .mcq-options{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .mcq-option{
+    text-align: left;
+    border: 1px solid var(--line);
+    background: #FAF8FD;
+    color: var(--ink);
+    border-radius: 8px;
+    padding: 9px 11px;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    cursor: pointer;
+  }
+  .mcq-option:hover{
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+  .mcq-option.is-correct{
+    border-color: var(--good);
+    background: var(--good-bg);
+    color: #2F5A45;
+    font-weight: 700;
+  }
+  .mcq-option.is-wrong{
+    border-color: #D9B46E;
+    background: var(--warn-bg);
+    color: var(--warn-ink);
+  }
+  .mcq-feedback{
+    display: none;
+    background: var(--warn-bg);
+    color: var(--warn-ink);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    margin-top: 10px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+  .mcq-feedback.is-visible{
+    display: block;
+  }
+  .mock-exam{
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin-bottom: 18px;
+    box-shadow: 0 1px 3px rgba(60,40,90,0.08);
+  }
+  .mock-exam-meta{
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    margin-bottom: 12px;
+  }
+  .exam-actions{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .exam-btn{
+    border: 0;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    padding: 9px 16px;
+    cursor: pointer;
+  }
+  .exam-btn.secondary{
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid var(--line);
+  }
+  .exam-result{
+    display: none;
+    margin-top: 12px;
+    background: var(--good-bg);
+    border-left: 3px solid var(--good);
+    color: #2F5A45;
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  .exam-result.is-visible{
+    display: block;
+  }
 
   .ai-team{
     display:flex;
@@ -612,6 +715,7 @@
     <a href="#ch-L111">課綱詳讀</a>
     <a href="#trap-section">考試陷阱</a>
     <a href="#stage2-section">情境練習</a>
+    <a href="#mock-exam-section">正式模擬</a>
   </nav>
 
   <!-- 學習進度 -->
@@ -635,135 +739,23 @@
 
   <!-- ===================== 3. 必背專有名詞庫 ===================== -->
   <div class="chapter-divider" id="vocab-section">
-    <span class="ch-num">3</span><span class="ch-title">必背專有名詞庫</span>
-    <span class="ch-code">點名詞展開：白話 → 常考法 → 錯誤選項 → 實務案例</span>
+    <span class="ch-num">3</span><span class="ch-title">學習章節索引</span>
+    <span class="ch-code">原第 3～7 項教學內容已回收到各課綱章節</span>
   </div>
 
-  <div class="section-title"><span class="num">科1</span>人工智慧基礎概論</div>
-
-
-
-  <div class="section-title sub"><span class="num">⬡</span>AI 治理</div>
-
-  <details class="vocab">
-    <summary><span class="v-name">AI 治理</span><span class="v-en">AI Governance</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>管理 AI「怎麼被開發與使用」的制度：政策、責任分工、風險控管、法規遵循。</div>
-      <div class="term-row"><span class="label">常考法</span>「企業導入 AI 應建立哪些機制確保負責任使用？」→ AI 治理框架。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「模型準確率夠高就不需治理機制」→ 必錯，準確率不等於公平、合規。</span></div>
-      <div class="term-row"><span class="label">實務</span>像公司的內控制度：不是不信任員工，而是確保流程可查核、有人負責。</div>
+  <div class="card">
+    <div class="field-body soft">請依序完成下方七個學習章節。每章已整合名詞、易混淆比較、官方題型、實務案例與補充內容，章節末端接著該章測驗。</div>
+    <div class="quick-nav" style="margin-top:12px;">
+      <a href="#ch-L111">L111</a>
+      <a href="#ch-L112">L112</a>
+      <a href="#ch-L113">L113</a>
+      <a href="#ch-L114">L114</a>
+      <a href="#ch-L121">L121</a>
+      <a href="#ch-L122">L122</a>
+      <a href="#ch-L123">L123</a>
+      <a href="#mock-exam-section">正式模擬</a>
     </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">偏見</span><span class="v-en">Bias</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>訓練資料或設計不當，讓 AI 對特定族群系統性不公平。</div>
-      <div class="term-row"><span class="label">常考法</span>「招募 AI 對女性履歷評分偏低，原因是？」→ 訓練資料存在偏見。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「AI 是機器所以絕對客觀」→ 必錯，AI 會複製資料裡的人為偏見。</span></div>
-      <div class="term-row"><span class="label">實務</span>若過去錄取的多是某類背景，AI 學了歷史資料就會偏好同類履歷。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">公平性</span><span class="v-en">Fairness</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>AI 的決策不因性別、年齡、種族等因素造成差別待遇。</div>
-      <div class="term-row"><span class="label">常考法</span>「確保不同群體獲得一致對待」屬於 AI 倫理的哪個原則？→ 公平性。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「把性別欄位刪掉就一定公平」→ 不一定，其他欄位可能隱含相同資訊（代理變數）。</span></div>
-      <div class="term-row"><span class="label">實務</span>薪資調整模型要檢查：相同績效的不同性別員工，建議調幅是否一致。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">透明性</span><span class="v-en">Transparency</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>公開揭露「有使用 AI」以及 AI 如何運作、用了什麼資料。</div>
-      <div class="term-row"><span class="label">常考法</span>「告知使用者正在與 AI 互動」屬於？→ 透明性（揭露義務）。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">透明性 vs 可解釋性：透明是「揭露有用 AI 與其運作方式」，可解釋是「說明單一決策的原因」。</span></div>
-      <div class="term-row"><span class="label">實務</span>客服機器人開頭聲明「您正在與 AI 客服對話」就是透明性。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">可解釋性</span><span class="v-en">Explainability</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>能說明「AI 為什麼做出這個判斷」，工具如 SHAP、LIME。</div>
-      <div class="term-row"><span class="label">常考法</span>「貸款被拒，需說明哪些因素影響決策」→ 可解釋性（XAI）。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「深度學習模型天生就可解釋」→ 錯，深度模型是黑盒，需要額外 XAI 工具。</span></div>
-      <div class="term-row"><span class="label">實務</span>AI 篩掉一份履歷，要能指出是「年資不足」還是「技能不符」造成的。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">問責性</span><span class="v-en">Accountability</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>AI 出錯時「有明確的人或單位負責」，並提供申訴與救濟管道。</div>
-      <div class="term-row"><span class="label">常考法</span>「AI 決策錯誤時應由誰負責、如何申訴」→ 問責性。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「是 AI 判斷的，所以沒有人需要負責」→ 必錯選項。</span></div>
-      <div class="term-row"><span class="label">實務</span>AI 初審履歷被誤刷，求職者要有管道申訴、由人資重新人工審查。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">人在迴路</span><span class="v-en">Human-in-the-loop</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>AI 產出後由「人做最終把關」，重要決策不能全自動。</div>
-      <div class="term-row"><span class="label">常考法</span>「高風險決策（醫療、人事）應採取什麼機制？」→ 人工覆核（Human-in-the-loop）。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「AI 準確率高就可完全自動化人事決策」→ 必錯，高風險場景要保留人為判斷。</span></div>
-      <div class="term-row"><span class="label">實務</span>AI 協作流程：小居規劃、阿克寫碼、扣哥檢查，最後由 Jenny 測試與拍板。</div>
-    </div>
-  </details>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </div>
 
 
 
@@ -777,39 +769,23 @@
 
   <!-- ===================== 4. 易混淆名詞比較 ===================== -->
   <div class="chapter-divider" id="compare-section">
-    <span class="ch-num">4</span><span class="ch-title">易混淆名詞比較</span>
-    <span class="ch-code">A 是什麼 → B 是什麼 → 考試怎麼騙你 → 一句話記憶</span>
+    <span class="ch-num">4</span><span class="ch-title">易混淆比較索引</span>
+    <span class="ch-code">比較卡片已分配回 L111～L123 對應章節</span>
   </div>
 
-
-
-
-
-
-
-
-  <div class="section-title sub"><span class="num">＋</span>補充組｜官方試題也考過的進階混淆</div>
-
-  <div class="term-card">
-    <div class="tc-head"><span class="tc-name">⑯ SHAP vs LIME vs Saliency Map</span></div>
-    <div class="compare-box">
-      <div class="compare-item"><div class="ci-head">SHAP</div>算每個特徵對單一預測「貢獻幾分」。例：貸款被拒，哪個特徵扣最多。</div>
-      <div class="compare-item"><div class="ci-head">LIME</div>在預測點附近建簡單代理模型做局部解釋，可跨模型使用。</div>
-      <div class="compare-item"><div class="ci-head">Saliency Map</div>標出影像中影響預測最大的「熱區」。例：醫療影像找病灶。</div>
-    </div>
-    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">影像解釋題放 SHAP/LIME 當誘答 → 影像熱區選 Saliency Map。</span></div>
-    <div class="mnemonic">算貢獻分→SHAP；局部代理→LIME；影像熱區→Saliency。</div>
+  <div class="card" style="padding:14px 16px;margin-bottom:10px;">
+    <div style="font-size:0.88rem;color:var(--ink-soft);line-height:1.7;">先讀完各章，再在章節內看該章易混淆比較。總複習可直接使用考前 30 分鐘速讀。</div>
   </div>
 
 
   <!-- ===================== 5. 官方題庫對應 ===================== -->
   <div class="chapter-divider" id="official-section">
-    <span class="ch-num">5</span><span class="ch-title">官方題庫對應</span>
-    <span class="ch-code">每個名詞在官方題目裡長什麼樣子（依 115 年公告試題）</span>
+    <span class="ch-num">5</span><span class="ch-title">官方題型索引</span>
+    <span class="ch-code">官方題型已回到對應學習章節</span>
   </div>
 
   <div class="card" style="padding:14px 16px;margin-bottom:10px;">
-    <div style="font-size:0.88rem;color:var(--ink-soft);line-height:1.7;">目的不是背題目，而是看懂「情境長怎樣 → 該選哪個觀念」。每卡：對應名詞 → 常見情境 → 正確判斷 → 錯誤選項 → 一句話記憶。</div>
+    <div style="font-size:0.88rem;color:var(--ink-soft);line-height:1.7;">目的不是背題目，而是看懂「情境長怎樣 → 該選哪個觀念」。請在 L112、L113、L121、L122、L123 章內閱讀對應官方題型。</div>
   </div>
 
 
@@ -820,11 +796,13 @@
 
   <!-- ===================== 6. 實務案例對照 ===================== -->
   <div class="chapter-divider" id="case-section">
-    <span class="ch-num">6</span><span class="ch-title">實務案例對照</span>
-    <span class="ch-code">用自己做過的三個專案，記住考點</span>
+    <span class="ch-num">6</span><span class="ch-title">實務案例索引</span>
+    <span class="ch-code">案例已分配回資料、工具與導入章節</span>
   </div>
 
-
+  <div class="card" style="padding:14px 16px;margin-bottom:10px;">
+    <div style="font-size:0.88rem;color:var(--ink-soft);line-height:1.7;">灶囍訂購系統、AI 協作流程、行政管理平台 / MAP 已放回 L112、L122、L123 對應章節。</div>
+  </div>
 
   <div class="chapter-divider" id="freq-section">
     <span class="ch-num">7</span><span class="ch-title">高頻考點庫</span>
@@ -838,101 +816,6 @@
     </div>
   </div>
 
-  <!-- ===== 第一科考點 ===== -->
-  <details class="zone-fold">
-    <summary>科目一｜人工智慧基礎概論 — 高頻考點</summary>
-    <div class="zone-body">
-  <div class="section-title"><span class="num">科1</span>人工智慧基礎概論 — 高頻考點</div>
-
-  <!-- 資料處理 -->
-  <div class="section-title" style="font-size:0.92rem;margin-top:8px;"><span class="num">⬡</span>資料處理</div>
-
-  <div class="star-section">
-    <div class="star-badge">★★★★★ 必考</div>
-
-    <div class="term-card">
-      <div class="tc-head"><span class="tc-name">Data Leakage（資料洩漏）</span><span class="tc-en">第一、二次各1題</span></div>
-      <div class="term-row"><span class="label">白話</span>訓練前就讓模型「偷看」到測試集資訊，使評估結果虛高。</div>
-      <div class="term-row"><span class="label">常考法</span>「標準化應在分割訓練集後，僅以訓練集計算統計量，再套用至測試集」→ 考選哪個做法正確。</div>
-      <div class="term-row"><span class="label">口訣</span><span class="mnemonic">先切再算，不能全算</span></div>
-      <div class="term-row"><span class="label">陷阱</span><span class="trap">選項裡的「對整份資料先做標準化再分割」是錯誤做法，卻看起來最直覺。</span></div>
-    </div>
-
-    <div class="term-card">
-      <div class="tc-head"><span class="tc-name">結構化 vs 非結構化資料</span><span class="tc-en">Structured / Unstructured Data</span></div>
-      <div class="term-row"><span class="label">白話</span>表格 = 結構化；文字、圖片、語音、PDF掃描 = 非結構化；JSON/XML = 半結構化。</div>
-      <div class="term-row"><span class="label">常考法</span>給你一段描述（ERP訂單、感測器數值、維修手寫描述），問各自屬於哪種資料型態。</div>
-      <div class="term-row"><span class="label">口訣</span><span class="mnemonic">欄位固定＝結構化，文字亂打＝非結構化</span></div>
-    </div>
-
-    <div class="term-card">
-      <div class="tc-head"><span class="tc-name">SMOTE</span><span class="tc-en">Synthetic Minority Over-sampling Technique</span></div>
-      <div class="term-row"><span class="label">白話</span>訓練資料類別嚴重不平衡（如詐欺案例極少），SMOTE 用少數樣本的特徵空間合成新樣本。</div>
-      <div class="term-row"><span class="label">常考法</span>問 SMOTE 的「主要功能是什麼」，重點是「合成少數類別新樣本」而非刪除多數類別。</div>
-      <div class="term-row"><span class="label">陷阱</span><span class="trap">「刪掉正常交易來平衡」是 Under-sampling，不是 SMOTE。</span></div>
-    </div>
-
-    <div class="term-card">
-      <div class="tc-head"><span class="tc-name">One-hot Encoding</span><span class="tc-en">獨熱編碼</span></div>
-      <div class="term-row"><span class="label">白話</span>把類別（如「工程師、教師、業務」）轉成 0/1 的多個欄位，讓模型不會誤解類別間有大小關係。</div>
-      <div class="term-row"><span class="label">常考法</span>問「哪種編碼最可能讓線性模型誤解類別大小關係」→ Label Encoding（直接編1,2,3）是陷阱。</div>
-      <div class="compare-box">
-        <div class="compare-item"><div class="ci-head">One-hot</div>類別變多欄 0/1，不帶大小關係</div>
-        <div class="compare-item"><div class="ci-head">Label Encoding</div>直接編號1,2,3，線性模型會誤以為有順序</div>
-      </div>
-    </div>
-
-    <div class="term-card">
-      <div class="tc-head"><span class="tc-name">Normalization vs Standardization</span><span class="tc-en">正規化 / 標準化</span></div>
-      <div class="term-row"><span class="label">白話</span>兩者都是縮放數值，目的是讓不同量級的特徵對模型影響較平衡。</div>
-      <div class="term-row"><span class="label">口訣</span><span class="mnemonic">KNN、SVM 對尺度敏感必做；決策樹最不在乎尺度可不做</span></div>
-    </div>
-
-    <div class="term-card">
-      <div class="tc-head"><span class="tc-name">Data Integration（資料整合）</span></div>
-      <div class="term-row"><span class="label">白話</span>把多個來源的資料統一格式、對齊欄位、去重複，讓不同系統的資料可以一起分析。</div>
-      <div class="term-row"><span class="label">常考法</span>「下列何者不屬於資料整合的主要目的」→ 「延長原始資料留存期限」不是整合目的。</div>
-    </div>
-  </div>
-
-  <!-- AI倫理 -->
-  <div class="section-title" style="font-size:0.92rem;margin-top:4px;"><span class="num">⬡</span>AI 倫理與法規</div>
-
-  <div class="star-section">
-    <div class="star-badge">★★★★★ 必考</div>
-
-    <div class="term-card">
-      <div class="tc-head"><span class="tc-name">AI 倫理五大核心原則</span></div>
-      <div class="compare-box">
-        <div class="compare-item"><div class="ci-head">公平性 Fairness</div>不同族群不能有明顯差異待遇</div>
-        <div class="compare-item"><div class="ci-head">透明性 Transparency</div>決策依據要能說清楚</div>
-        <div class="compare-item"><div class="ci-head">隱私 Privacy</div>個資不能未告知就使用</div>
-        <div class="compare-item"><div class="ci-head">可解釋性 Explainability</div>模型為何這樣決策要能解釋</div>
-        <div class="compare-item"><div class="ci-head">問責性 Accountability</div>出問題要能釐清責任</div>
-      </div>
-      <div class="term-row" style="margin-top:8px;"><span class="label">常考法</span>給三個情境分別問違反哪個原則：無法說明判斷依據＝透明性；某族群誤診率偏高＝公平性；個資未告知就用＝隱私。</div>
-    </div>
-
-    <div class="term-card">
-      <div class="tc-head"><span class="tc-name">AI 基本法 / 金融機構運用 AI 規範</span></div>
-      <div class="term-row"><span class="label">白話</span>金融業 AI 對外服務前必須揭露：是否 AI 自動完成、服務對象與範圍、有無替代方案。</div>
-      <div class="term-row"><span class="label">陷阱</span><span class="trap">「必須公開模型原始程式碼」→ 不是必要揭露事項！這是兩次都考的陷阱選項。</span></div>
-    </div>
-
-    <div class="term-card">
-      <div class="tc-head"><span class="tc-name">可解釋 AI（XAI）三大技術</span></div>
-      <div class="compare-box">
-        <div class="compare-item"><div class="ci-head">SHAP</div>算每個特徵對單一預測的貢獻量（加減分）</div>
-        <div class="compare-item"><div class="ci-head">LIME</div>在預測點附近建局部簡單模型解釋（代理模型）</div>
-        <div class="compare-item"><div class="ci-head">Saliency Map</div>標示影像中對預測結果影響最大的區域</div>
-      </div>
-      <div class="term-row" style="margin-top:6px;"><span class="label">口訣</span><span class="mnemonic">SHAP＝貢獻分配；LIME＝局部代理；Saliency＝影像熱區</span></div>
-    </div>
-  </div>
-
-  <!-- ===== 第二科考點 ===== -->
-    </div>
-  </details>
   <details class="zone-fold">
     <summary>考點星級彙整表</summary>
     <div class="zone-body">
@@ -1127,6 +1010,132 @@
           <div class="kw-explain">系統出錯時，要能說清楚是誰的責任、怎麼補救。</div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="section-title sub"><span class="num">⬡</span>L111 必背名詞補強</div>
+
+  <details class="vocab">
+    <summary><span class="v-name">AI 治理</span><span class="v-en">AI Governance</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>管理 AI「怎麼被開發與使用」的制度：政策、責任分工、風險控管、法規遵循。</div>
+      <div class="term-row"><span class="label">常考法</span>「企業導入 AI 應建立哪些機制確保負責任使用？」→ AI 治理框架。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「模型準確率夠高就不需治理機制」→ 必錯，準確率不等於公平、合規。</span></div>
+      <div class="term-row"><span class="label">實務</span>像公司的內控制度：不是不信任員工，而是確保流程可查核、有人負責。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">偏見</span><span class="v-en">Bias</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>訓練資料或設計不當，讓 AI 對特定族群系統性不公平。</div>
+      <div class="term-row"><span class="label">常考法</span>「招募 AI 對女性履歷評分偏低，原因是？」→ 訓練資料存在偏見。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「AI 是機器所以絕對客觀」→ 必錯，AI 會複製資料裡的人為偏見。</span></div>
+      <div class="term-row"><span class="label">實務</span>若過去錄取的多是某類背景，AI 學了歷史資料就會偏好同類履歷。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">公平性</span><span class="v-en">Fairness</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>AI 的決策不因性別、年齡、種族等因素造成差別待遇。</div>
+      <div class="term-row"><span class="label">常考法</span>「確保不同群體獲得一致對待」屬於 AI 倫理的哪個原則？→ 公平性。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「把性別欄位刪掉就一定公平」→ 不一定，其他欄位可能隱含相同資訊（代理變數）。</span></div>
+      <div class="term-row"><span class="label">實務</span>薪資調整模型要檢查：相同績效的不同性別員工，建議調幅是否一致。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">透明性</span><span class="v-en">Transparency</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>公開揭露「有使用 AI」以及 AI 如何運作、用了什麼資料。</div>
+      <div class="term-row"><span class="label">常考法</span>「告知使用者正在與 AI 互動」屬於？→ 透明性（揭露義務）。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">透明性 vs 可解釋性：透明是「揭露有用 AI 與其運作方式」，可解釋是「說明單一決策的原因」。</span></div>
+      <div class="term-row"><span class="label">實務</span>客服機器人開頭聲明「您正在與 AI 客服對話」就是透明性。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">可解釋性</span><span class="v-en">Explainability</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>能說明「AI 為什麼做出這個判斷」，工具如 SHAP、LIME。</div>
+      <div class="term-row"><span class="label">常考法</span>「貸款被拒，需說明哪些因素影響決策」→ 可解釋性（XAI）。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「深度學習模型天生就可解釋」→ 錯，深度模型是黑盒，需要額外 XAI 工具。</span></div>
+      <div class="term-row"><span class="label">實務</span>AI 篩掉一份履歷，要能指出是「年資不足」還是「技能不符」造成的。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">問責性</span><span class="v-en">Accountability</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>AI 出錯時「有明確的人或單位負責」，並提供申訴與救濟管道。</div>
+      <div class="term-row"><span class="label">常考法</span>「AI 決策錯誤時應由誰負責、如何申訴」→ 問責性。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「是 AI 判斷的，所以沒有人需要負責」→ 必錯選項。</span></div>
+      <div class="term-row"><span class="label">實務</span>AI 初審履歷被誤刷，求職者要有管道申訴、由人資重新人工審查。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">人在迴路</span><span class="v-en">Human-in-the-loop</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>AI 產出後由「人做最終把關」，重要決策不能全自動。</div>
+      <div class="term-row"><span class="label">常考法</span>「高風險決策（醫療、人事）應採取什麼機制？」→ 人工覆核（Human-in-the-loop）。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「AI 準確率高就可完全自動化人事決策」→ 必錯，高風險場景要保留人為判斷。</span></div>
+      <div class="term-row"><span class="label">實務</span>AI 協作流程：小居規劃、阿克寫碼、扣哥檢查，最後由 Jenny 測試與拍板。</div>
+    </div>
+  </details>
+
+  <div class="section-title sub"><span class="num">⬡</span>L111 易混淆比較</div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">SHAP vs LIME vs Saliency Map</span></div>
+    <div class="compare-box">
+      <div class="compare-item"><div class="ci-head">SHAP</div>算每個特徵對單一預測的貢獻量（加減分）。</div>
+      <div class="compare-item"><div class="ci-head">LIME</div>在預測點附近建局部簡單模型解釋（代理模型）。</div>
+      <div class="compare-item"><div class="ci-head">Saliency Map</div>標示影像中對預測結果影響最大的區域。</div>
+    </div>
+    <div class="mnemonic">SHAP＝貢獻分配；LIME＝局部代理；Saliency＝影像熱區</div>
+  </div>
+
+  <div class="section-title sub"><span class="num">⬡</span>L111 補充內容</div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">AI 倫理五大核心原則</span></div>
+    <div class="compare-box">
+      <div class="compare-item"><div class="ci-head">公平性 Fairness</div>不同族群不能有明顯差異待遇</div>
+      <div class="compare-item"><div class="ci-head">透明性 Transparency</div>決策依據要能說清楚</div>
+      <div class="compare-item"><div class="ci-head">隱私 Privacy</div>個資不能未告知就使用</div>
+      <div class="compare-item"><div class="ci-head">可解釋性 Explainability</div>模型為何這樣決策要能解釋</div>
+      <div class="compare-item"><div class="ci-head">問責性 Accountability</div>出問題要能釐清責任</div>
+    </div>
+    <div class="term-row" style="margin-top:8px;"><span class="label">常考法</span>給三個情境分別問違反哪個原則：無法說明判斷依據＝透明性；某族群誤診率偏高＝公平性；個資未告知就用＝隱私。</div>
+  </div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">AI 基本法 / 金融機構運用 AI 規範</span></div>
+    <div class="term-row"><span class="label">白話</span>金融業 AI 對外服務前必須揭露：是否 AI 自動完成、服務對象與範圍、有無替代方案。</div>
+    <div class="term-row"><span class="label">陷阱</span><span class="trap">「必須公開模型原始程式碼」→ 不是必要揭露事項！這是兩次都考的陷阱選項。</span></div>
+  </div>
+
+  <div class="chapter-quiz" id="quiz-L111">
+    <div class="section-title sub"><span class="num">測驗</span>L111 章節測驗</div>
+    <div class="quiz-card mcq" data-answer="B" data-explain="弱 AI 只能完成特定任務；目前常見工具如 ChatGPT、Claude、Codex 都屬於弱 AI 應用。">
+      <div class="quiz-q">01｜ChatGPT、Claude、Codex 這類工具最適合歸類為？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. 強人工智慧，具備通用智慧</button>
+        <button class="mcq-option" data-choice="B">B. 弱人工智慧，針對特定任務</button>
+        <button class="mcq-option" data-choice="C">C. 完全不需要人類監督的自動決策系統</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+    <div class="quiz-card mcq" data-answer="C" data-explain="金融 AI 的揭露重點是是否 AI 自動完成、服務對象與用途、是否有替代方案；不要求公開模型原始程式碼。">
+      <div class="quiz-q">02｜金融機構運用 AI 對外服務時，下列何者不是必要揭露事項？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. 是否為 AI 自動完成</button>
+        <button class="mcq-option" data-choice="B">B. 服務對象與用途</button>
+        <button class="mcq-option" data-choice="C">C. 模型原始程式碼</button>
+      </div>
+      <div class="mcq-feedback"></div>
     </div>
   </div>
 
@@ -1486,6 +1495,28 @@
     <div class="term-row"><span class="label">專案情境</span>Google Form 接單、Google Sheet 存資料、Apps Script 寫少量程式、GitHub Pages 部署前台；店家登入才能看訂單，後端重算金額。</div>
     <div class="term-row"><span class="label">對應考點</span>Low Code、Structured Data（訂單表格）、Access Control（登入權限）、Data Integrity（後端重算金額）、GitHub Pages、Apps Script、MVP（先做接單核心功能）。</div>
     <div class="term-row"><span class="label">記憶</span><span class="mnemonic">灶囍＝Low Code 實戰：表格資料＋權限＋後端把關＋先做最小版本。</span></div>
+  </div>
+
+  <div class="chapter-quiz" id="quiz-L112">
+    <div class="section-title sub"><span class="num">測驗</span>L112 章節測驗</div>
+    <div class="quiz-card mcq" data-answer="B" data-explain="標準化要先分割訓練集與測試集，只用訓練集計算統計量，再套用到測試集，避免 Data Leakage。">
+      <div class="quiz-q">01｜避免 Data Leakage 的正確做法是？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. 對全部資料先標準化，再分割資料集</button>
+        <button class="mcq-option" data-choice="B">B. 先分割資料集，只用訓練集計算標準化參數</button>
+        <button class="mcq-option" data-choice="C">C. 讓測試資料也參與訓練，提高準確度</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+    <div class="quiz-card mcq" data-answer="A" data-explain="SMOTE 是針對少數類別合成新樣本，不是刪除多數類別。">
+      <div class="quiz-q">02｜SMOTE 的主要功能是？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. 合成少數類別的新樣本</button>
+        <button class="mcq-option" data-choice="B">B. 刪除多數類別樣本</button>
+        <button class="mcq-option" data-choice="C">C. 將文字資料轉成 JSON</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
   </div>
 
   <!-- ===================== 三、L113 ===================== -->
@@ -1920,6 +1951,28 @@
     </details>
   </div>
 
+  <div class="chapter-quiz" id="quiz-L113">
+    <div class="section-title sub"><span class="num">測驗</span>L113 章節測驗</div>
+    <div class="quiz-card mcq" data-answer="C" data-explain="非監督式學習沒有事先標記的標準答案，適合讓模型自行找分群或結構。">
+      <div class="quiz-q">01｜資料沒有標籤，想讓系統自己找出客戶群組，應選？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. 監督式學習</button>
+        <button class="mcq-option" data-choice="B">B. 回歸分析</button>
+        <button class="mcq-option" data-choice="C">C. 非監督式學習</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+    <div class="quiz-card mcq" data-answer="B" data-explain="Recall 是該抓的抓到了多少；癌症篩檢怕漏掉病患，所以優先看 Recall。">
+      <div class="quiz-q">02｜癌症篩檢最怕漏掉真正病患，應優先看哪個指標？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. Precision</button>
+        <button class="mcq-option" data-choice="B">B. Recall</button>
+        <button class="mcq-option" data-choice="C">C. Context Window</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+  </div>
+
   <!-- ===================== 四、L114 ===================== -->
   <div class="chapter-divider" id="ch-L114">
     <span class="ch-num">4</span><span class="ch-title">L114 鑑別式 AI 與生成式 AI</span>
@@ -2020,6 +2073,28 @@
         <strong>正確觀念：</strong>VAE 是<strong>生成模型</strong>，能學習資料的分布，在缺乏異常標記時用來學習「正常樣本分布」，偏離者視為異常。最適合<strong>無標記的異常偵測</strong>與圖像生成，不適合直接做分類。
       </div>
     </details>
+  </div>
+
+  <div class="chapter-quiz" id="quiz-L114">
+    <div class="section-title sub"><span class="num">測驗</span>L114 章節測驗</div>
+    <div class="quiz-card mcq" data-answer="A" data-explain="生成式 AI 的核心是產生新內容，例如文字、圖片、程式碼；鑑別式 AI 則是判斷或分類。">
+      <div class="quiz-q">01｜AI 幫忙產生商品介紹文案，屬於？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. 生成式 AI</button>
+        <button class="mcq-option" data-choice="B">B. 鑑別式 AI</button>
+        <button class="mcq-option" data-choice="C">C. 資料標準化</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+    <div class="quiz-card mcq" data-answer="C" data-explain="GAN 由生成器與判別器互相競爭訓練；這是它最常被考的特徵。">
+      <div class="quiz-q">02｜由生成器與判別器互相競爭訓練的是？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. KNN</button>
+        <button class="mcq-option" data-choice="B">B. SVM</button>
+        <button class="mcq-option" data-choice="C">C. GAN</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
   </div>
 
   <!-- ===================== 五、L121 ===================== -->
@@ -2203,6 +2278,28 @@
         <strong>正確觀念：</strong>No/Low-Code 的核心優勢是<strong>快速開發、降低技術門檻</strong>，但<strong>不代表更安全或零維護</strong>。封閉式平台還有 Vendor Lock-in 風險。「不需維護」「一定安全」都是陷阱選項。
       </div>
     </details>
+  </div>
+
+  <div class="chapter-quiz" id="quiz-L121">
+    <div class="section-title sub"><span class="num">測驗</span>L121 章節測驗</div>
+    <div class="quiz-card mcq" data-answer="B" data-explain="Webhook 是事件發生時由系統主動推送通知；定時查詢是輪詢，不是 Webhook。">
+      <div class="quiz-q">01｜訂單成立後即時通知另一個系統，最符合哪個概念？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. API 定時輪詢</button>
+        <button class="mcq-option" data-choice="B">B. Webhook</button>
+        <button class="mcq-option" data-choice="C">C. Label Encoding</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+    <div class="quiz-card mcq" data-answer="A" data-explain="Iterator 是把一包多筆資料拆開逐筆處理；Array Aggregator 則是把多筆結果合併。">
+      <div class="quiz-q">02｜一張訂單含多個品項，需要逐項處理，應使用？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. Iterator</button>
+        <button class="mcq-option" data-choice="B">B. Array Aggregator</button>
+        <button class="mcq-option" data-choice="C">C. Temperature</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
   </div>
 
   <!-- ===================== 六、L122 ===================== -->
@@ -2650,6 +2747,28 @@
     </details>
   </div>
 
+  <div class="chapter-quiz" id="quiz-L122">
+    <div class="section-title sub"><span class="num">測驗</span>L122 章節測驗</div>
+    <div class="quiz-card mcq" data-answer="A" data-explain="RAG 適合需要查詢外部文件、知識可即時更新、需要來源可追溯的情境。">
+      <div class="quiz-q">01｜公司內規每月更新，希望 AI 回答時引用最新文件，應優先選？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. RAG</button>
+        <button class="mcq-option" data-choice="B">B. Fine-tuning</button>
+        <button class="mcq-option" data-choice="C">C. SMOTE</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+    <div class="quiz-card mcq" data-answer="C" data-explain="Few-shot Prompting 是在提示詞中放少數範例，模型權重不會被更新；Fine-tuning 才會訓練並更新權重。">
+      <div class="quiz-q">02｜提示詞中附上三組範例讓模型參考，這是？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. Fine-tuning</button>
+        <button class="mcq-option" data-choice="B">B. Knowledge Distillation</button>
+        <button class="mcq-option" data-choice="C">C. Few-shot Prompting</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+  </div>
+
   <!-- ===================== 七、L123 ===================== -->
   <div class="chapter-divider" id="ch-L123">
     <span class="ch-num">7</span><span class="ch-title">L123 生成式 AI 導入評估規劃</span>
@@ -2912,6 +3031,28 @@
     </details>
   </div>
 
+  <div class="chapter-quiz" id="quiz-L123">
+    <div class="section-title sub"><span class="num">測驗</span>L123 章節測驗</div>
+    <div class="quiz-card mcq" data-answer="B" data-explain="TCO 是總持有成本，包含 API 費用、維護人力、基礎設施、訓練、整合與資安合規等成本。">
+      <div class="quiz-q">01｜評估生成式 AI 導入成本時，只看 API 費用為什麼不完整？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. 因為 API 費用完全不重要</button>
+        <button class="mcq-option" data-choice="B">B. 因為 TCO 還包含維護、訓練、整合與資安合規等成本</button>
+        <button class="mcq-option" data-choice="C">C. 因為 ROI 只看模型準確率</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+    <div class="quiz-card mcq" data-answer="C" data-explain="Vendor Lock-in 是平台採專有格式、資料無法匯出或沒有標準 API，導致未來轉移困難。">
+      <div class="quiz-q">02｜平台資料無法匯出、沒有標準 API，主要風險是？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. Data Leakage</button>
+        <button class="mcq-option" data-choice="B">B. SMOTE</button>
+        <button class="mcq-option" data-choice="C">C. Vendor Lock-in</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+  </div>
+
   <div class="chapter-divider" id="trap-section">
     <span class="ch-num">⚠</span><span class="ch-title">考試陷阱專區</span>
     <span class="ch-code">官方試題中反覆出現的錯誤選項設計邏輯</span>
@@ -3113,6 +3254,166 @@
     </details>
   </div>
 
+  <!-- ===================== 正式考試模擬 ===================== -->
+  <div class="chapter-divider" id="mock-exam-section">
+    <span class="ch-num">考</span><span class="ch-title">正式考試模擬</span>
+    <span class="ch-code">科目一、科目二分科作答；送出後顯示分數、正確答案與解析</span>
+  </div>
+
+  <div class="mock-exam" data-exam="subject1">
+    <div class="section-title sub"><span class="num">科1</span>人工智慧基礎概論模擬</div>
+    <div class="mock-exam-meta">範圍：L111～L114。作答後按「送出科目一」，系統會計分並展開解析。</div>
+
+    <div class="quiz-card mcq" data-answer="B" data-explain="弱 AI 是針對特定任務的 AI；目前常見生成式 AI 工具都不是通用強 AI。">
+      <div class="quiz-q">01｜ChatGPT、Claude、Codex 最適合歸類為？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. 強 AI</button>
+        <button class="mcq-option" data-choice="B">B. 弱 AI</button>
+        <button class="mcq-option" data-choice="C">C. 資料治理系統</button>
+        <button class="mcq-option" data-choice="D">D. Webhook</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="quiz-card mcq" data-answer="C" data-explain="模型原始程式碼不是金融 AI 對外服務的必要揭露事項。">
+      <div class="quiz-q">02｜金融 AI 對外服務時，下列何者不是必要揭露事項？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. 是否由 AI 自動完成</button>
+        <button class="mcq-option" data-choice="B">B. 服務對象與用途</button>
+        <button class="mcq-option" data-choice="C">C. 模型原始程式碼</button>
+        <button class="mcq-option" data-choice="D">D. 是否有替代方案</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="quiz-card mcq" data-answer="A" data-explain="避免資料洩漏的口訣是先切再算，不能先用全部資料計算統計量。">
+      <div class="quiz-q">03｜標準化與資料切分的正確順序是？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. 先切訓練/測試，再用訓練集計算統計量</button>
+        <button class="mcq-option" data-choice="B">B. 先對全部資料標準化，再切分</button>
+        <button class="mcq-option" data-choice="C">C. 先看測試集再調整模型</button>
+        <button class="mcq-option" data-choice="D">D. 測試資料可以參與訓練</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="quiz-card mcq" data-answer="D" data-explain="SMOTE 是 Synthetic Minority Over-sampling Technique，重點是合成少數類別的新樣本。">
+      <div class="quiz-q">04｜SMOTE 的主要作用是？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. 刪除多數類別</button>
+        <button class="mcq-option" data-choice="B">B. 加密資料</button>
+        <button class="mcq-option" data-choice="C">C. 產生提示詞</button>
+        <button class="mcq-option" data-choice="D">D. 合成少數類別樣本</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="quiz-card mcq" data-answer="A" data-explain="非監督式學習沒有標籤，常用於分群與找資料結構。">
+      <div class="quiz-q">05｜沒有標籤、想找出客戶分群，應選？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. 非監督式學習</button>
+        <button class="mcq-option" data-choice="B">B. 監督式學習</button>
+        <button class="mcq-option" data-choice="C">C. One-shot Prompting</button>
+        <button class="mcq-option" data-choice="D">D. Vendor Lock-in</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="quiz-card mcq" data-answer="B" data-explain="生成式 AI 產生新內容；鑑別式 AI 負責判斷與分類。">
+      <div class="quiz-q">06｜垃圾郵件過濾主要屬於？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. 生成式 AI</button>
+        <button class="mcq-option" data-choice="B">B. 鑑別式 AI</button>
+        <button class="mcq-option" data-choice="C">C. RAG</button>
+        <button class="mcq-option" data-choice="D">D. TCO</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="exam-actions">
+      <button class="exam-btn" data-submit-exam="subject1">送出科目一</button>
+      <button class="exam-btn secondary" data-reset-exam="subject1">重作科目一</button>
+    </div>
+    <div class="exam-result" data-exam-result="subject1"></div>
+  </div>
+
+  <div class="mock-exam" data-exam="subject2">
+    <div class="section-title sub"><span class="num">科2</span>生成式 AI 應用與規劃模擬</div>
+    <div class="mock-exam-meta">範圍：L121～L123。作答後按「送出科目二」，系統會計分並展開解析。</div>
+
+    <div class="quiz-card mcq" data-answer="B" data-explain="Webhook 是事件發生時主動推送通知；API 通常是主動發請求取得資料。">
+      <div class="quiz-q">01｜訂單成立後即時通知另一系統，最符合？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. API 輪詢</button>
+        <button class="mcq-option" data-choice="B">B. Webhook</button>
+        <button class="mcq-option" data-choice="C">C. SMOTE</button>
+        <button class="mcq-option" data-choice="D">D. SHAP</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="quiz-card mcq" data-answer="A" data-explain="RAG 適合資料常更新、需要查詢企業文件並附來源的情境。">
+      <div class="quiz-q">02｜企業內規常更新，希望 AI 先查資料再回答，應選？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. RAG</button>
+        <button class="mcq-option" data-choice="B">B. Fine-tuning</button>
+        <button class="mcq-option" data-choice="C">C. Label Encoding</button>
+        <button class="mcq-option" data-choice="D">D. Under-sampling</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="quiz-card mcq" data-answer="C" data-explain="Few-shot 是在提示詞中放少數範例，不會更新模型權重。">
+      <div class="quiz-q">03｜Prompt 中附上三個範例讓模型照做，這是？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. Fine-tuning</button>
+        <button class="mcq-option" data-choice="B">B. LoRA</button>
+        <button class="mcq-option" data-choice="C">C. Few-shot Prompting</button>
+        <button class="mcq-option" data-choice="D">D. Data Leakage</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="quiz-card mcq" data-answer="D" data-explain="Token 是 LLM 的文字計量單位，會影響上下文長度與 API 費用。">
+      <div class="quiz-q">04｜LLM API 費用與輸入/輸出長度主要依什麼計算？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. CSS 行數</button>
+        <button class="mcq-option" data-choice="B">B. 使用者人數</button>
+        <button class="mcq-option" data-choice="C">C. 圖片解析度</button>
+        <button class="mcq-option" data-choice="D">D. Token 數</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="quiz-card mcq" data-answer="A" data-explain="TCO 是總持有成本，不能只看 API 費用，也要看維護、訓練、整合、資安合規等成本。">
+      <div class="quiz-q">05｜評估 AI 導入成本時，下列何者最完整？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. API 費用、維護、訓練、整合與資安合規都納入</button>
+        <button class="mcq-option" data-choice="B">B. 只看 API 呼叫費用</button>
+        <button class="mcq-option" data-choice="C">C. 只看模型是否熱門</button>
+        <button class="mcq-option" data-choice="D">D. 只看使用者喜不喜歡 UI</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="quiz-card mcq" data-answer="C" data-explain="Vendor Lock-in 是平台採專有格式或資料不可攜，導致未來轉移困難。">
+      <div class="quiz-q">06｜平台資料無法匯出、沒有標準 API，主要風險是？</div>
+      <div class="mcq-options">
+        <button class="mcq-option" data-choice="A">A. Context Window 太小</button>
+        <button class="mcq-option" data-choice="B">B. Recall 太低</button>
+        <button class="mcq-option" data-choice="C">C. Vendor Lock-in</button>
+        <button class="mcq-option" data-choice="D">D. One-hot Encoding</button>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="exam-actions">
+      <button class="exam-btn" data-submit-exam="subject2">送出科目二</button>
+      <button class="exam-btn secondary" data-reset-exam="subject2">重作科目二</button>
+    </div>
+    <div class="exam-result" data-exam-result="subject2"></div>
+  </div>
+
   <!-- ===================== 高頻考點庫 V1 ===================== -->
   <footer>
     iPAS AI應用規劃師初級｜考試學習網站 v3<br>
@@ -3170,6 +3471,91 @@
       b.addEventListener('change', function(){
         saveState();
         updateProgress();
+      });
+    });
+
+    function showMcqFeedback(card, selected){
+      var answer = card.getAttribute('data-answer');
+      var explain = card.getAttribute('data-explain') || '';
+      var feedback = card.querySelector('.mcq-feedback');
+      var options = card.querySelectorAll('.mcq-option');
+      options.forEach(function(opt){
+        var choice = opt.getAttribute('data-choice');
+        opt.classList.remove('is-correct', 'is-wrong');
+        opt.setAttribute('aria-pressed', choice === selected ? 'true' : 'false');
+        if(choice === answer){
+          opt.classList.add('is-correct');
+        }else if(choice === selected){
+          opt.classList.add('is-wrong');
+        }
+      });
+      if(feedback){
+        feedback.innerHTML = '<strong>正確答案：' + answer + '</strong><br>' + explain;
+        feedback.classList.add('is-visible');
+      }
+      card.setAttribute('data-selected', selected);
+    }
+
+    document.querySelectorAll('.mcq-option').forEach(function(button){
+      button.setAttribute('type', 'button');
+      button.addEventListener('click', function(){
+        var card = button.closest('.mcq');
+        if(!card) return;
+        showMcqFeedback(card, button.getAttribute('data-choice'));
+      });
+    });
+
+    function submitExam(examId){
+      var exam = document.querySelector('[data-exam="' + examId + '"]');
+      if(!exam) return;
+      var cards = exam.querySelectorAll('.mcq');
+      var correct = 0;
+      cards.forEach(function(card){
+        var selected = card.getAttribute('data-selected') || '';
+        var answer = card.getAttribute('data-answer');
+        if(selected === answer) correct++;
+        showMcqFeedback(card, selected);
+      });
+      var result = document.querySelector('[data-exam-result="' + examId + '"]');
+      if(result){
+        result.textContent = '得分：' + correct + ' / ' + cards.length + '。已顯示每題正確答案與解析。';
+        result.classList.add('is-visible');
+      }
+    }
+
+    function resetExam(examId){
+      var exam = document.querySelector('[data-exam="' + examId + '"]');
+      if(!exam) return;
+      exam.querySelectorAll('.mcq').forEach(function(card){
+        card.removeAttribute('data-selected');
+        card.querySelectorAll('.mcq-option').forEach(function(opt){
+          opt.classList.remove('is-correct', 'is-wrong');
+          opt.setAttribute('aria-pressed', 'false');
+        });
+        var feedback = card.querySelector('.mcq-feedback');
+        if(feedback){
+          feedback.textContent = '';
+          feedback.classList.remove('is-visible');
+        }
+      });
+      var result = document.querySelector('[data-exam-result="' + examId + '"]');
+      if(result){
+        result.textContent = '';
+        result.classList.remove('is-visible');
+      }
+    }
+
+    document.querySelectorAll('[data-submit-exam]').forEach(function(button){
+      button.setAttribute('type', 'button');
+      button.addEventListener('click', function(){
+        submitExam(button.getAttribute('data-submit-exam'));
+      });
+    });
+
+    document.querySelectorAll('[data-reset-exam]').forEach(function(button){
+      button.setAttribute('type', 'button');
+      button.addEventListener('click', function(){
+        resetExam(button.getAttribute('data-reset-exam'));
       });
     });
 
