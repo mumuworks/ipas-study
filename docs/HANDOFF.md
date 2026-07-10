@@ -1,5 +1,130 @@
 # HANDOFF
 
+## 2026-07-10｜L113～L123 第一階段內容重整一次完成
+
+本次任務依照 L112 的整理方式，完成 `L113`、`L114`、`L121`、`L122`、`L123` 的既有內容回收整理。已修改 `index.html` 內容順序，但未修改 CSS、UI、JavaScript、題目文字，未 commit、未 push。
+
+已完成：
+
+- 將 L113 尚留在補強區的快答與陷阱解析補回 `L113 機器學習概念`。
+- 將 L114 相關「必背名詞、易混淆比較、補充內容」搬回 `L114 鑑別式 AI 與生成式 AI`。
+- 將 L121 相關「必背名詞、易混淆比較、官方題型、補充內容」搬回 `L121 No Code / Low Code 概念`。
+- 將 L122 相關「必背名詞、易混淆比較、官方題型、實務案例、補充內容」搬回 `L122 生成式 AI 應用領域與工具使用`。
+- 將 L123 相關「必背名詞、易混淆比較、官方題型、實務案例、補充內容」搬回 `L123 生成式 AI 導入評估規劃`。
+- 從原本散落位置移除已搬移的重複教學卡片。
+- 移除搬空後的「科目二｜生成式 AI 應用與規劃 — 高頻考點」空摺疊區。
+- 保留原有樣式 class 與 HTML 結構，不新增 CSS。
+- 保留原有 JavaScript 與 `localStorage` 進度功能。
+
+本次整合進 L113 的新增回收內容：
+
+- 監督式 vs 非監督式快答補充
+- Data Drift vs Concept Drift 快答補充
+- 非監督式學習陷阱解析
+
+本次整合進 L114 的內容：
+
+- 生成對抗網路（GAN）
+- Generative AI vs Discriminative AI
+- VAE 的分類陷阱解析
+
+本次整合進 L121 的內容：
+
+- No Code
+- Low Code
+- API
+- Webhook
+- Branch / Router
+- Iterator
+- Formatter
+- Array Aggregator
+- API vs Webhook
+- No Code vs Low Code
+- 題型07｜Webhook
+- API / Webhook 高頻補充
+- Dify 平台元件
+- No-Code / Low-Code 安全與維護陷阱解析
+
+本次整合進 L122 的內容：
+
+- LLM
+- Token
+- Context Window
+- Temperature
+- Chat History
+- Prompt Engineering
+- Zero-shot
+- One-shot
+- Few-shot
+- Chain of Thought
+- RAG
+- Fine-tuning
+- PEFT
+- LoRA
+- Knowledge Distillation
+- RAG vs Fine-tuning
+- Prompt Engineering vs Fine-tuning
+- Token vs Context Window
+- LoRA vs Knowledge Distillation
+- 題型05｜RAG
+- 題型06｜Token
+- 題型10｜LoRA / PEFT
+- 案例③｜AI 協作流程
+- LLM / Prompt / 企業知識應用 / Chat History 高頻補充
+- RAG vs Fine-tuning 快答
+- Few-shot Prompting vs Fine-tuning 快答
+- Chat History、RAG、Few-shot、Temperature、CoT 相關陷阱解析
+
+本次整合進 L123 的內容：
+
+- Hallucination
+- Vendor Lock-in
+- ROI
+- TCO
+- Feasibility Assessment
+- Phased Implementation
+- MVP
+- Prompt Injection vs Prompt Leakage vs Hallucination
+- 題型08｜Vendor Lock-in
+- 題型09｜AI Governance
+- 案例②｜行政管理平台 / MAP
+- Vendor Lock-in 高頻補充
+- ROI / TCO 成本效益分析
+- Data Governance 高頻補充
+- Prompt Injection 高頻補充
+- Prompt Injection vs Prompt Leakage vs Hallucination 快答
+- TCO 陷阱解析
+
+本次保留原位置：
+
+- `AI 治理`、偏見、公平性、透明性、可解釋性、問責性、Human-in-the-loop 等名詞卡，因內容明確屬 L111 範圍，本輪範圍未包含 L111。
+- `SHAP vs LIME vs Saliency Map` 與相關快答，因內容明確屬 L111 XAI / AI 治理範圍。
+- `AI 倫理與法規` 高頻補充，因內容明確屬 L111。
+- 考點星級彙整表，作為總複習索引保留。
+- 考前 30 分鐘速讀，作為總複習索引保留。
+- 第二階段情境對照練習，因本次要求未包含情境題搬移，且前次 L112/L113 試點也未搬移情境題。
+
+發現的重複或跨章內容：
+
+- `VAE` 目前名詞仍在 L113 模型補強，VAE 分類陷阱解析已回 L114 生成模型脈絡；若要完全單一歸屬，需人工決定 VAE 最終放 L113 或 L114。
+- `Data Governance` 同時出現在 L112 的資料治理名詞與 L123 的企業導入治理補充；一者偏資料管理，一者偏導入治理，建議後續人工確認是否保留跨章。
+- `RAG` 同時出現在 L122 工具使用與 L123 風險管理原章關鍵字；一者偏工具原理，一者偏降低幻覺風險，建議保留或人工決定是否只留 L122。
+
+待人工確認：
+
+- 是否下一輪納入 `L111`，將 AI 治理、倫理、XAI、金融 AI 揭露義務等內容完整回收至 L111。
+- 是否要把第二階段情境題也拆回各章，或繼續保留為總複習練習區。
+- 是否要把「官方題庫對應」「實務案例對照」這些原總覽區改成純索引說明，避免章內搬移後看起來偏空。
+
+本次驗證：
+
+- 已執行 `git diff --check`，結果通過。
+- 已檢查 diff，未出現 CSS 或 JavaScript 變更。
+
+下一個最適合任務：
+
+「人工確認跨章歸屬與是否納入 L111，確認後再做第二輪：清理總覽區空殼與建立索引式導覽文字。」
+
 ## 2026-07-10｜L113 第一階段內容重整
 
 本次任務只處理 `L113 機器學習概念`，沿用上一輪 L112 的整理方式，已修改 `index.html` 內容順序，但未修改 CSS、UI、JavaScript、題目文字，未 commit、未 push。

@@ -4,6 +4,15 @@
 
 ### Changed
 
+- 完成 `index.html` 的 `L113`～`L123` 第一階段內容回收整理。
+- 將 L113 尚留在補強區的快答與陷阱解析搬回 L113：監督式 vs 非監督式、Data Drift vs Concept Drift、非監督式學習陷阱解析。
+- 重整 `L114 鑑別式 AI 與生成式 AI`：搬回 GAN、Generative AI vs Discriminative AI、VAE 分類陷阱解析。
+- 重整 `L121 No Code / Low Code 概念`：搬回 No Code、Low Code、API、Webhook、Branch / Router、Iterator、Formatter、Array Aggregator、API vs Webhook、No Code vs Low Code、Webhook 官方題型、Dify 平台元件與 No/Low-Code 陷阱解析。
+- 重整 `L122 生成式 AI 應用領域與工具使用`：搬回 LLM、Token、Context Window、Temperature、Chat History、Prompt Engineering、Zero/One/Few-shot、CoT、RAG、Fine-tuning、PEFT、LoRA、Knowledge Distillation、相關比較、官方題型、AI 協作流程與補充陷阱。
+- 重整 `L123 生成式 AI 導入評估規劃`：搬回 Hallucination、Vendor Lock-in、ROI、TCO、Feasibility Assessment、Phased Implementation、MVP、Prompt Injection / Leakage / Hallucination 比較、Vendor Lock-in 與 AI Governance 官方題型、MAP 案例與導入治理補充。
+- 移除搬空後的「科目二｜生成式 AI 應用與規劃 — 高頻考點」空摺疊區。
+- 更新 `docs/HANDOFF.md` 的本輪交接、保留原位、重複內容與待人工確認項目。
+- 更新 `docs/ROADMAP.md` 的第一階段狀態與下一步。
 - 重整 `index.html` 的 `L113 機器學習概念` 章節。
 - 將既有 L113 相關名詞搬回 L113：監督式學習、非監督式學習、強化學習、分類、回歸、分群、訓練資料、測試資料、模型、過擬合、欠擬合、CNN、RNN、Transformer、VAE、Softmax、KNN、決策樹、SVM、Wide and Deep。
 - 將既有 L113 相關易混淆比較搬回 L113：Supervised vs Unsupervised、Classification vs Regression vs Clustering、Overfitting vs Underfitting、Data Drift vs Concept Drift、CNN vs LSTM vs Transformer、Precision vs Recall。
