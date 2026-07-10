@@ -641,159 +641,7 @@
 
   <div class="section-title"><span class="num">科1</span>人工智慧基礎概論</div>
 
-  <div class="section-title sub"><span class="num">⬡</span>機器學習</div>
-
-  <details class="vocab">
-    <summary><span class="v-name">監督式學習</span><span class="v-en">Supervised Learning</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>訓練資料「有標準答案（標籤）」，模型學習輸入對到答案的規則。</div>
-      <div class="term-row"><span class="label">常考法</span>「用歷史房價資料（含成交價）預測房價」→ 監督式。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「監督式＝需要人隨時盯著模型」→ 錯，監督指的是資料有標籤。</span></div>
-      <div class="term-row"><span class="label">實務</span>拿過去「有標記准駁結果」的請假單教模型判斷，就是監督式。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">非監督式學習</span><span class="v-en">Unsupervised Learning</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>資料「沒有標準答案」，模型自己找結構，最常見是分群。</div>
-      <div class="term-row"><span class="label">常考法</span>「將客戶依消費行為自動分組，事先沒有分類標準」→ 非監督式（Clustering）。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「非監督式需事先定義每筆資料的正確類別」→ 完全相反，必錯選項。</span></div>
-      <div class="term-row"><span class="label">實務</span>把灶囍客戶依購買頻率、金額自動分成幾群，事先不知道會分出什麼群。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">強化學習</span><span class="v-en">Reinforcement Learning</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>透過「嘗試 → 得到獎勵或懲罰 → 修正行為」與環境互動學習，像訓練寵物。</div>
-      <div class="term-row"><span class="label">常考法</span>「AI 下棋透過勝負回饋不斷改進策略」→ 強化學習。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">把強化學習歸到監督式 → 錯，它是靠獎勵訊號，不是靠標籤，是第三種類型。</span></div>
-      <div class="term-row"><span class="label">實務</span>ChatGPT 的 RLHF（人類回饋強化學習）：用人的偏好回饋調整回答。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">分類</span><span class="v-en">Classification</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>預測「類別」：是／否、A／B／C。輸出是有限選項。</div>
-      <div class="term-row"><span class="label">常考法</span>「判斷郵件是否為垃圾郵件」→ 分類。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">與回歸互換：預測「會不會流失」是分類，預測「流失機率造成的營收損失金額」是回歸。</span></div>
-      <div class="term-row"><span class="label">實務</span>判斷履歷「符合／不符合」職缺條件，就是分類問題。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">回歸</span><span class="v-en">Regression</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>預測「連續數值」：金額、溫度、銷量。輸出是一個數字。</div>
-      <div class="term-row"><span class="label">常考法</span>「預測下個月營業額」→ 回歸。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">看到「預測」就選回歸 → 要看輸出：類別選分類，數值選回歸。</span></div>
-      <div class="term-row"><span class="label">實務</span>用歷史訂單預測灶囍下個月「訂單量會是多少」，就是回歸。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">分群</span><span class="v-en">Clustering</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>沒有事先定義類別，讓模型把相似的資料自動聚在一起。屬於非監督式。</div>
-      <div class="term-row"><span class="label">常考法</span>「無標籤客戶資料自動分組」→ 分群（如 K-means）。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">分群 vs 分類：分類有事先定義好的類別（有標籤），分群沒有。</span></div>
-      <div class="term-row"><span class="label">實務</span>把員工出勤模式自動分成幾種型態，再檢視各群特徵，事先不設答案。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">訓練資料</span><span class="v-en">Training Data</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>拿來「教」模型的資料，模型從中學習規則。</div>
-      <div class="term-row"><span class="label">常考法</span>與標準化、Data Leakage 合考：統計量只能來自訓練資料。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「訓練資料也可以拿來評估模型好壞」→ 錯，那會高估表現，要用測試資料。</span></div>
-      <div class="term-row"><span class="label">實務</span>像教材與練習題：學生（模型）用它學習。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">測試資料</span><span class="v-en">Test Data</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>模型沒看過的資料，用來檢驗模型真實實力。</div>
-      <div class="term-row"><span class="label">常考法</span>「評估模型泛化能力應使用？」→ 測試資料。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「測試資料可參與訓練以提升準確率」→ 這就是 Data Leakage，必錯。</span></div>
-      <div class="term-row"><span class="label">實務</span>像正式考卷：不能先給學生看，看了成績就不準。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">模型</span><span class="v-en">Model</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>從資料中學到的「規則集合」，輸入新資料就能產出預測或判斷。</div>
-      <div class="term-row"><span class="label">常考法</span>「訓練完成後用來對新資料做預測的是？」→ 模型。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">把「模型」與「演算法」混用：演算法是學習方法，模型是學完的成果。</span></div>
-      <div class="term-row"><span class="label">實務</span>像 SOP：從過去經驗整理出的判斷規則，新案件進來照規則處理。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">過擬合</span><span class="v-en">Overfitting</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>模型把訓練資料「背起來」了：訓練分數很高，遇到新資料就不行。</div>
-      <div class="term-row"><span class="label">常考法</span>「訓練準確率 99%、測試準確率 70%，發生什麼？」→ 過擬合。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">解法選項陷阱：「增加模型複雜度」會更嚴重；正解是簡化模型、增加資料、正則化。</span></div>
-      <div class="term-row"><span class="label">實務</span>像只背考古題的學生：題目一換就不會。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">欠擬合</span><span class="v-en">Underfitting</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>模型太簡單，連訓練資料都學不好：訓練、測試分數都低。</div>
-      <div class="term-row"><span class="label">常考法</span>「訓練與測試準確率都很低」→ 欠擬合。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">與過擬合對調：兩個都低是欠擬合，訓練高測試低才是過擬合。</span></div>
-      <div class="term-row"><span class="label">實務</span>像完全沒讀書的學生：練習題和正式考都低分。</div>
-    </div>
-  </details>
-
   <div class="section-title sub"><span class="num">⬡</span>模型與 AI 技術</div>
-
-  <details class="vocab">
-    <summary><span class="v-name">卷積神經網路</span><span class="v-en">CNN</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>擅長處理「影像」的神經網路，會抓局部特徵（邊緣、形狀）。</div>
-      <div class="term-row"><span class="label">常考法</span>「產線瑕疵影像檢測應選？」→ CNN。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">影像題放 RNN／LSTM 當誘答：那是處理序列（時間、文字）用的。</span></div>
-      <div class="term-row"><span class="label">實務</span>拍禮盒照片自動檢查包裝有沒有瑕疵，就是 CNN 的應用場景。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">循環神經網路</span><span class="v-en">RNN</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>擅長處理「序列」資料（時間序列、文字），會記住前面的資訊。LSTM 是它的改良版。</div>
-      <div class="term-row"><span class="label">常考法</span>「預測未來一週銷量的時間序列資料應選？」→ RNN／LSTM。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">序列題放 CNN 當誘答；另外「RNN 完全被淘汰」也是錯的說法。</span></div>
-      <div class="term-row"><span class="label">實務</span>依每日訂單的「先後順序」預測下週訂單量，順序有意義就是序列資料。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">Transformer 架構</span><span class="v-en">Transformer</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>用「注意力機制（Attention）」同時看整句話的架構，是 GPT、BERT 等 LLM 的基礎。</div>
-      <div class="term-row"><span class="label">常考法</span>「現今大型語言模型主要基於哪種架構？」→ Transformer。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「LLM 基於 CNN／RNN」→ 錯；Transformer 的核心是自注意力機制。</span></div>
-      <div class="term-row"><span class="label">實務</span>ChatGPT、Claude 都是 Transformer 架構的模型。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">變分自編碼器</span><span class="v-en">VAE</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>先把資料壓縮成「潛在空間」再還原生成的生成式模型，生成結果較平滑穩定。</div>
-      <div class="term-row"><span class="label">常考法</span>「將資料編碼到潛在空間再解碼生成」→ VAE。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">與 GAN 互換：GAN 是生成器對抗判別器，VAE 是編碼再解碼。</span></div>
-      <div class="term-row"><span class="label">實務</span>像先把照片濃縮成幾個關鍵參數，再從參數畫回一張相似的新照片。</div>
-    </div>
-  </details>
 
   <details class="vocab">
     <summary><span class="v-name">生成對抗網路</span><span class="v-en">GAN</span></summary>
@@ -802,56 +650,6 @@
       <div class="term-row"><span class="label">常考法</span>「由生成器與判別器互相競爭訓練」→ GAN。</div>
       <div class="term-row"><span class="label">錯誤選項</span><span class="trap">GAN 訓練不穩定、可能發生 Mode Collapse（只會生成少數幾種樣本）是常考細節。</span></div>
       <div class="term-row"><span class="label">實務</span>像做假鈔的與驗鈔的互相較勁：最後假鈔逼真到難以分辨。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">Softmax 函數</span><span class="v-en">Softmax</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>把模型輸出轉成「加總為 1 的機率分布」，用在多分類的最後一層。</div>
-      <div class="term-row"><span class="label">常考法</span>「多類別分類輸出層常用哪個函數？」→ Softmax。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">二元分類常用 Sigmoid，多分類用 Softmax，兩者互為誘答。</span></div>
-      <div class="term-row"><span class="label">實務</span>模型判斷留言情緒：正面 70%、中立 20%、負面 10%，加總 100%。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">K 最近鄰</span><span class="v-en">KNN</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>看新資料「最近的 K 個鄰居」是哪類，多數決定它是哪類。</div>
-      <div class="term-row"><span class="label">常考法</span>「依最相似的 K 筆資料多數決分類」→ KNN。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「KNN 需要大量訓練過程」→ 錯，KNN 幾乎不訓練，預測時才計算距離（懶惰學習）。</span></div>
-      <div class="term-row"><span class="label">實務</span>新客戶像哪一群舊客戶（消費金額、頻率最接近），就推測他是那一群。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">決策樹</span><span class="v-en">Decision Tree</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>一連串「是／否」問題往下分支的模型，像流程圖，容易解釋。</div>
-      <div class="term-row"><span class="label">常考法</span>「需要高可解釋性的分類模型」→ 決策樹。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「決策樹不會過擬合」→ 錯，樹長太深很容易過擬合，需剪枝。</span></div>
-      <div class="term-row"><span class="label">實務</span>請假審核規則：天數 &gt; 3？→ 是否有證明？→ 核准／退回，就是決策樹思維。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">支援向量機</span><span class="v-en">SVM</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>找一條「分隔線（超平面）」把兩類資料分得最開的分類演算法。</div>
-      <div class="term-row"><span class="label">常考法</span>「尋找最大間隔超平面進行分類」→ SVM。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「SVM 只能處理線性問題」→ 錯，透過核函數（Kernel）可處理非線性。</span></div>
-      <div class="term-row"><span class="label">實務</span>像在兩群人中間畫一條最寬的走道，讓兩邊離走道都最遠。</div>
-    </div>
-  </details>
-
-  <details class="vocab">
-    <summary><span class="v-name">Wide and Deep 模型</span><span class="v-en">Wide and Deep</span></summary>
-    <div class="v-body">
-      <div class="term-row"><span class="label">白話</span>「Wide 記憶」＋「Deep 泛化」並用：既記住已知組合，又能推論沒看過的組合，常用於推薦系統。</div>
-      <div class="term-row"><span class="label">常考法</span>「推薦系統同時需要記憶與泛化能力」→ Wide and Deep。</div>
-      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「Wide 負責泛化、Deep 負責記憶」→ 顛倒了，Wide＝記憶、Deep＝泛化。</span></div>
-      <div class="term-row"><span class="label">實務</span>老客戶推他買過的（記憶）＋新客戶推相似族群愛買的（泛化）。</div>
     </div>
   </details>
 
@@ -1256,37 +1054,6 @@
   </div>
 
   <div class="term-card">
-    <div class="tc-head"><span class="tc-name">② Supervised vs Unsupervised Learning</span></div>
-    <div class="compare-box">
-      <div class="compare-item"><div class="ci-head">監督式</div>資料有標準答案（標籤），學「輸入 → 答案」的規則。</div>
-      <div class="compare-item"><div class="ci-head">非監督式</div>資料沒有答案，模型自己找結構，最常見是分群。</div>
-    </div>
-    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">「非監督式需事先定義每筆資料的正確類別」→ 完全相反；「強化學習屬於監督式」→ 也是錯的。</span></div>
-    <div class="mnemonic">看有沒有「事先標好的答案」：有＝監督，沒有＝非監督。</div>
-  </div>
-
-  <div class="term-card">
-    <div class="tc-head"><span class="tc-name">③ Classification vs Regression vs Clustering</span></div>
-    <div class="compare-box">
-      <div class="compare-item"><div class="ci-head">分類</div>預測類別（是／否、A/B/C），有標籤，監督式。</div>
-      <div class="compare-item"><div class="ci-head">回歸</div>預測連續數值（金額、銷量），有標籤，監督式。</div>
-      <div class="compare-item"><div class="ci-head">分群</div>自動把相似資料聚成群，沒有標籤，非監督式。</div>
-    </div>
-    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">「預測客戶會不會流失」放回歸當誘答（其實是分類）；「客戶分群」放分類當誘答（其實是非監督分群）。</span></div>
-    <div class="mnemonic">類別→分類；數字→回歸；沒答案自己分→分群。</div>
-  </div>
-
-  <div class="term-card">
-    <div class="tc-head"><span class="tc-name">⑦ Overfitting vs Underfitting</span></div>
-    <div class="compare-box">
-      <div class="compare-item"><div class="ci-head">過擬合</div>訓練分數高、測試分數低：把訓練資料背起來了。</div>
-      <div class="compare-item"><div class="ci-head">欠擬合</div>訓練、測試分數都低：模型太簡單，根本沒學會。</div>
-    </div>
-    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">給「訓練99%、測試70%」問解法，選項放「增加模型複雜度」→ 會更糟；正解是簡化模型、增加資料、正則化。</span></div>
-    <div class="mnemonic">背考古題＝過擬合；沒讀書＝欠擬合。</div>
-  </div>
-
-  <div class="term-card">
     <div class="tc-head"><span class="tc-name">⑧ RAG vs Fine-tuning</span></div>
     <div class="compare-box">
       <div class="compare-item"><div class="ci-head">RAG</div>先檢索外部資料再回答。知識可即時更新、可附來源，不動模型。</div>
@@ -1360,16 +1127,6 @@
   </div>
 
   <div class="term-card">
-    <div class="tc-head"><span class="tc-name">⑰ Data Drift vs Concept Drift</span></div>
-    <div class="compare-box">
-      <div class="compare-item"><div class="ci-head">Data Drift</div>輸入資料的「分布」變了：新客群的年齡、裝置不同。</div>
-      <div class="compare-item"><div class="ci-head">Concept Drift</div>輸入沒變，但輸入與輸出的「關係規律」變了：消費趨勢轉變，舊指標失效。</div>
-    </div>
-    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">兩者定義互換出題，抓關鍵字：資料本身變＝Data，規律關係變＝Concept。</span></div>
-    <div class="mnemonic">資料變了＝Data Drift；規律變了＝Concept Drift。</div>
-  </div>
-
-  <div class="term-card">
     <div class="tc-head"><span class="tc-name">⑱ Prompt Injection vs Prompt Leakage vs Hallucination</span></div>
     <div class="compare-box">
       <div class="compare-item"><div class="ci-head">Injection</div>攻擊者在輸入中嵌入惡意指令，覆蓋系統設定（含藏在外部網頁的間接注入）。</div>
@@ -1380,27 +1137,6 @@
     <div class="mnemonic">被指令綁架＝Injection；設定外洩＝Leakage；自己瞎掰＝幻覺。</div>
   </div>
 
-  <div class="term-card">
-    <div class="tc-head"><span class="tc-name">⑲ CNN vs LSTM vs Transformer</span></div>
-    <div class="compare-box">
-      <div class="compare-item"><div class="ci-head">CNN</div>影像：抓局部特徵。瑕疵檢測、影像分類。</div>
-      <div class="compare-item"><div class="ci-head">LSTM</div>序列：記住前後順序。時間序列預測、舊式語言處理。</div>
-      <div class="compare-item"><div class="ci-head">Transformer</div>注意力機制同時看全局，LLM 的基礎架構。</div>
-    </div>
-    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">影像題放 LSTM、序列題放 CNN 互為誘答；「LLM 基於 CNN」也是常見錯誤選項。</span></div>
-    <div class="mnemonic">看圖→CNN；看順序→LSTM；看全局（LLM）→Transformer。</div>
-  </div>
-
-  <div class="term-card">
-    <div class="tc-head"><span class="tc-name">⑳ Precision vs Recall</span></div>
-    <div class="compare-box">
-      <div class="compare-item"><div class="ci-head">Precision 精確率</div>「抓到的裡面有多少是對的」。誤報成本高時看它（垃圾郵件別誤殺正常信）。</div>
-      <div class="compare-item"><div class="ci-head">Recall 召回率</div>「該抓的抓到了多少」。漏抓成本高時看它（癌症篩檢寧可多驗不可漏掉）。</div>
-    </div>
-    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">給「不能漏掉病患」情境放 Precision 當誘答 → 怕漏掉選 Recall；怕誤殺選 Precision。</span></div>
-    <div class="mnemonic">怕抓錯→Precision；怕漏抓→Recall。</div>
-  </div>
-
   <!-- ===================== 5. 官方題庫對應 ===================== -->
   <div class="chapter-divider" id="official-section">
     <span class="ch-num">5</span><span class="ch-title">官方題庫對應</span>
@@ -1409,14 +1145,6 @@
 
   <div class="card" style="padding:14px 16px;margin-bottom:10px;">
     <div style="font-size:0.88rem;color:var(--ink-soft);line-height:1.7;">目的不是背題目，而是看懂「情境長怎樣 → 該選哪個觀念」。每卡：對應名詞 → 常見情境 → 正確判斷 → 錯誤選項 → 一句話記憶。</div>
-  </div>
-
-  <div class="term-card">
-    <div class="tc-head"><span class="tc-name">題型04｜Unsupervised Learning</span><span class="tc-en">非監督式</span></div>
-    <div class="term-row"><span class="label">常見情境</span>資料「沒有標籤」、想找出客戶分群、事先不知道分類標準。</div>
-    <div class="term-row"><span class="label">正確判斷</span>沒有標準答案可對照，模型自己找結構（分群），無法直接判斷對錯。</div>
-    <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「需事先定義每筆資料的正確類別」「可直接計算預測準確率」。</span></div>
-    <div class="term-row"><span class="label">記憶</span><span class="mnemonic">沒標籤＝非監督＝自己分群。</span></div>
   </div>
 
   <div class="term-card">
@@ -1553,71 +1281,6 @@
       <div class="tc-head"><span class="tc-name">Data Integration（資料整合）</span></div>
       <div class="term-row"><span class="label">白話</span>把多個來源的資料統一格式、對齊欄位、去重複，讓不同系統的資料可以一起分析。</div>
       <div class="term-row"><span class="label">常考法</span>「下列何者不屬於資料整合的主要目的」→ 「延長原始資料留存期限」不是整合目的。</div>
-    </div>
-  </div>
-
-  <!-- 機器學習 -->
-  <div class="section-title" style="font-size:0.92rem;margin-top:4px;"><span class="num">⬡</span>機器學習類型</div>
-
-  <div class="star-section">
-    <div class="star-badge">★★★★★ 必考</div>
-
-    <div class="term-card">
-      <div class="tc-head"><span class="tc-name">三種學習類型比較</span></div>
-      <div class="compare-box">
-        <div class="compare-item"><div class="ci-head">監督式 Supervised</div>有標籤答案，做分類或預測數值</div>
-        <div class="compare-item"><div class="ci-head">非監督式 Unsupervised</div>沒標籤，自己找分群或結構</div>
-        <div class="compare-item"><div class="ci-head">強化式 Reinforcement</div>透過與環境互動、獎懲調整策略</div>
-      </div>
-      <div class="term-row" style="margin-top:8px;"><span class="label">陷阱</span><span class="trap">「非監督式不能準確判斷資料對錯」→ 非監督式沒有標準答案，無法直接做分類判斷，這是考試常見誤導。</span></div>
-      <div class="term-row"><span class="label">常考法</span>給一個情境描述，問哪種學習方式最適合：有歷史標記 = 監督式；沒有標記自行分群 = 非監督式；透過回饋調整路線/策略 = 強化式。</div>
-    </div>
-
-    <div class="term-card">
-      <div class="tc-head"><span class="tc-name">半監督式學習</span><span class="tc-en">Semi-supervised Learning</span></div>
-      <div class="term-row"><span class="label">白話</span>同時用少量有標籤資料 + 大量無標籤資料訓練，最適合「只有部分資料有標注」的情境。</div>
-      <div class="term-row"><span class="label">常考法</span>農場 30% 影像有標注 + 70% 沒標注 → 半監督式最適合。</div>
-    </div>
-  </div>
-
-  <!-- 模型架構 -->
-  <div class="section-title" style="font-size:0.92rem;margin-top:4px;"><span class="num">⬡</span>模型架構</div>
-
-  <div class="star-section">
-    <div class="star-badge">★★★★★ 必考</div>
-
-    <div class="term-card">
-      <div class="tc-head"><span class="tc-name">CNN（卷積神經網路）</span><span class="tc-en">Convolutional Neural Network</span></div>
-      <div class="term-row"><span class="label">白話</span>最適合處理影像的神經網路架構，能自動學習圖片中的局部特徵（邊緣、形狀）。</div>
-      <div class="term-row"><span class="label">口訣</span><span class="mnemonic">看圖選CNN，聽序列選LSTM</span></div>
-    </div>
-
-    <div class="term-card">
-      <div class="tc-head"><span class="tc-name">LSTM（長短期記憶網路）</span><span class="tc-en">Long Short-Term Memory</span></div>
-      <div class="term-row"><span class="label">白話</span>RNN 的改良版，能記住較長序列中的早期資訊，適合時序預測、語音辨識。</div>
-      <div class="term-row"><span class="label">陷阱</span><span class="trap">「RNN 長序列記憶困難」→ 用 LSTM 改善，不是用 CNN。</span></div>
-    </div>
-
-    <div class="term-card">
-      <div class="tc-head"><span class="tc-name">VAE（變分自編碼器）</span><span class="tc-en">Variational Autoencoder</span></div>
-      <div class="term-row"><span class="label">白話</span>學習資料的分布規律後，可以生成新的、有變化的樣本，適合異常偵測和圖像生成。</div>
-      <div class="term-row"><span class="label">常考法</span>「缺乏異常標記資料時，要偵測與正常模式顯著不同的設備狀態」→ VAE 學習正常分佈，異常自然被偵測出來。</div>
-    </div>
-
-    <div class="term-card">
-      <div class="tc-head"><span class="tc-name">Wide &amp; Deep 模型</span></div>
-      <div class="term-row"><span class="label">白話</span>同時有 Wide（記住過去已出現的特徵組合規律）和 Deep（對沒出現過的組合做合理預測）兩條路徑。</div>
-      <div class="term-row"><span class="label">常考法</span>資料同時有大量稀疏類別特徵 + 數值特徵，要「記住舊規律又能預測新組合」→ Wide &amp; Deep。</div>
-    </div>
-
-    <div class="term-card">
-      <div class="tc-head"><span class="tc-name">Softmax 函數</span></div>
-      <div class="term-row"><span class="label">白話</span>把模型輸出轉成各類別的機率分佈，所有類別機率加總＝1，適合多分類問題的輸出層。</div>
-      <div class="compare-box">
-        <div class="compare-item"><div class="ci-head">Softmax</div>多分類，輸出機率總和=1</div>
-        <div class="compare-item"><div class="ci-head">Sigmoid</div>二元分類，輸出單一機率</div>
-        <div class="compare-item"><div class="ci-head">ReLU</div>隱藏層常用激活函數，非輸出層</div>
-      </div>
     </div>
   </div>
 
@@ -2492,6 +2155,335 @@
           <div class="kw-explain">把東西歸到某一類，例如判斷這筆訂單「正常」還是「異常」。</div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="section-title sub"><span class="num">⬡</span>L113 必背名詞補強</div>
+
+  <details class="vocab">
+    <summary><span class="v-name">監督式學習</span><span class="v-en">Supervised Learning</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>訓練資料「有標準答案（標籤）」，模型學習輸入對到答案的規則。</div>
+      <div class="term-row"><span class="label">常考法</span>「用歷史房價資料（含成交價）預測房價」→ 監督式。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「監督式＝需要人隨時盯著模型」→ 錯，監督指的是資料有標籤。</span></div>
+      <div class="term-row"><span class="label">實務</span>拿過去「有標記准駁結果」的請假單教模型判斷，就是監督式。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">非監督式學習</span><span class="v-en">Unsupervised Learning</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>資料「沒有標準答案」，模型自己找結構，最常見是分群。</div>
+      <div class="term-row"><span class="label">常考法</span>「將客戶依消費行為自動分組，事先沒有分類標準」→ 非監督式（Clustering）。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「非監督式需事先定義每筆資料的正確類別」→ 完全相反，必錯選項。</span></div>
+      <div class="term-row"><span class="label">實務</span>把灶囍客戶依購買頻率、金額自動分成幾群，事先不知道會分出什麼群。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">強化學習</span><span class="v-en">Reinforcement Learning</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>透過「嘗試 → 得到獎勵或懲罰 → 修正行為」與環境互動學習，像訓練寵物。</div>
+      <div class="term-row"><span class="label">常考法</span>「AI 下棋透過勝負回饋不斷改進策略」→ 強化學習。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">把強化學習歸到監督式 → 錯，它是靠獎勵訊號，不是靠標籤，是第三種類型。</span></div>
+      <div class="term-row"><span class="label">實務</span>ChatGPT 的 RLHF（人類回饋強化學習）：用人的偏好回饋調整回答。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">分類</span><span class="v-en">Classification</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>預測「類別」：是／否、A／B／C。輸出是有限選項。</div>
+      <div class="term-row"><span class="label">常考法</span>「判斷郵件是否為垃圾郵件」→ 分類。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">與回歸互換：預測「會不會流失」是分類，預測「流失機率造成的營收損失金額」是回歸。</span></div>
+      <div class="term-row"><span class="label">實務</span>判斷履歷「符合／不符合」職缺條件，就是分類問題。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">回歸</span><span class="v-en">Regression</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>預測「連續數值」：金額、溫度、銷量。輸出是一個數字。</div>
+      <div class="term-row"><span class="label">常考法</span>「預測下個月營業額」→ 回歸。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">看到「預測」就選回歸 → 要看輸出：類別選分類，數值選回歸。</span></div>
+      <div class="term-row"><span class="label">實務</span>用歷史訂單預測灶囍下個月「訂單量會是多少」，就是回歸。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">分群</span><span class="v-en">Clustering</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>沒有事先定義類別，讓模型把相似的資料自動聚在一起。屬於非監督式。</div>
+      <div class="term-row"><span class="label">常考法</span>「無標籤客戶資料自動分組」→ 分群（如 K-means）。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">分群 vs 分類：分類有事先定義好的類別（有標籤），分群沒有。</span></div>
+      <div class="term-row"><span class="label">實務</span>把員工出勤模式自動分成幾種型態，再檢視各群特徵，事先不設答案。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">訓練資料</span><span class="v-en">Training Data</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>拿來「教」模型的資料，模型從中學習規則。</div>
+      <div class="term-row"><span class="label">常考法</span>與標準化、Data Leakage 合考：統計量只能來自訓練資料。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「訓練資料也可以拿來評估模型好壞」→ 錯，那會高估表現，要用測試資料。</span></div>
+      <div class="term-row"><span class="label">實務</span>像教材與練習題：學生（模型）用它學習。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">測試資料</span><span class="v-en">Test Data</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>模型沒看過的資料，用來檢驗模型真實實力。</div>
+      <div class="term-row"><span class="label">常考法</span>「評估模型泛化能力應使用？」→ 測試資料。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「測試資料可參與訓練以提升準確率」→ 這就是 Data Leakage，必錯。</span></div>
+      <div class="term-row"><span class="label">實務</span>像正式考卷：不能先給學生看，看了成績就不準。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">模型</span><span class="v-en">Model</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>從資料中學到的「規則集合」，輸入新資料就能產出預測或判斷。</div>
+      <div class="term-row"><span class="label">常考法</span>「訓練完成後用來對新資料做預測的是？」→ 模型。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">把「模型」與「演算法」混用：演算法是學習方法，模型是學完的成果。</span></div>
+      <div class="term-row"><span class="label">實務</span>像 SOP：從過去經驗整理出的判斷規則，新案件進來照規則處理。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">過擬合</span><span class="v-en">Overfitting</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>模型把訓練資料「背起來」了：訓練分數很高，遇到新資料就不行。</div>
+      <div class="term-row"><span class="label">常考法</span>「訓練準確率 99%、測試準確率 70%，發生什麼？」→ 過擬合。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">解法選項陷阱：「增加模型複雜度」會更嚴重；正解是簡化模型、增加資料、正則化。</span></div>
+      <div class="term-row"><span class="label">實務</span>像只背考古題的學生：題目一換就不會。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">欠擬合</span><span class="v-en">Underfitting</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>模型太簡單，連訓練資料都學不好：訓練、測試分數都低。</div>
+      <div class="term-row"><span class="label">常考法</span>「訓練與測試準確率都很低」→ 欠擬合。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">與過擬合對調：兩個都低是欠擬合，訓練高測試低才是過擬合。</span></div>
+      <div class="term-row"><span class="label">實務</span>像完全沒讀書的學生：練習題和正式考都低分。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">卷積神經網路</span><span class="v-en">CNN</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>擅長處理「影像」的神經網路，會抓局部特徵（邊緣、形狀）。</div>
+      <div class="term-row"><span class="label">常考法</span>「產線瑕疵影像檢測應選？」→ CNN。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">影像題放 RNN／LSTM 當誘答：那是處理序列（時間、文字）用的。</span></div>
+      <div class="term-row"><span class="label">實務</span>拍禮盒照片自動檢查包裝有沒有瑕疵，就是 CNN 的應用場景。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">循環神經網路</span><span class="v-en">RNN</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>擅長處理「序列」資料（時間序列、文字），會記住前面的資訊。LSTM 是它的改良版。</div>
+      <div class="term-row"><span class="label">常考法</span>「預測未來一週銷量的時間序列資料應選？」→ RNN／LSTM。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">序列題放 CNN 當誘答；另外「RNN 完全被淘汰」也是錯的說法。</span></div>
+      <div class="term-row"><span class="label">實務</span>依每日訂單的「先後順序」預測下週訂單量，順序有意義就是序列資料。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">Transformer 架構</span><span class="v-en">Transformer</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>用「注意力機制（Attention）」同時看整句話的架構，是 GPT、BERT 等 LLM 的基礎。</div>
+      <div class="term-row"><span class="label">常考法</span>「現今大型語言模型主要基於哪種架構？」→ Transformer。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「LLM 基於 CNN／RNN」→ 錯；Transformer 的核心是自注意力機制。</span></div>
+      <div class="term-row"><span class="label">實務</span>ChatGPT、Claude 都是 Transformer 架構的模型。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">變分自編碼器</span><span class="v-en">VAE</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>先把資料壓縮成「潛在空間」再還原生成的生成式模型，生成結果較平滑穩定。</div>
+      <div class="term-row"><span class="label">常考法</span>「將資料編碼到潛在空間再解碼生成」→ VAE。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">與 GAN 互換：GAN 是生成器對抗判別器，VAE 是編碼再解碼。</span></div>
+      <div class="term-row"><span class="label">實務</span>像先把照片濃縮成幾個關鍵參數，再從參數畫回一張相似的新照片。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">Softmax 函數</span><span class="v-en">Softmax</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>把模型輸出轉成「加總為 1 的機率分布」，用在多分類的最後一層。</div>
+      <div class="term-row"><span class="label">常考法</span>「多類別分類輸出層常用哪個函數？」→ Softmax。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">二元分類常用 Sigmoid，多分類用 Softmax，兩者互為誘答。</span></div>
+      <div class="term-row"><span class="label">實務</span>模型判斷留言情緒：正面 70%、中立 20%、負面 10%，加總 100%。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">K 最近鄰</span><span class="v-en">KNN</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>看新資料「最近的 K 個鄰居」是哪類，多數決定它是哪類。</div>
+      <div class="term-row"><span class="label">常考法</span>「依最相似的 K 筆資料多數決分類」→ KNN。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「KNN 需要大量訓練過程」→ 錯，KNN 幾乎不訓練，預測時才計算距離（懶惰學習）。</span></div>
+      <div class="term-row"><span class="label">實務</span>新客戶像哪一群舊客戶（消費金額、頻率最接近），就推測他是那一群。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">決策樹</span><span class="v-en">Decision Tree</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>一連串「是／否」問題往下分支的模型，像流程圖，容易解釋。</div>
+      <div class="term-row"><span class="label">常考法</span>「需要高可解釋性的分類模型」→ 決策樹。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「決策樹不會過擬合」→ 錯，樹長太深很容易過擬合，需剪枝。</span></div>
+      <div class="term-row"><span class="label">實務</span>請假審核規則：天數 &gt; 3？→ 是否有證明？→ 核准／退回，就是決策樹思維。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">支援向量機</span><span class="v-en">SVM</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>找一條「分隔線（超平面）」把兩類資料分得最開的分類演算法。</div>
+      <div class="term-row"><span class="label">常考法</span>「尋找最大間隔超平面進行分類」→ SVM。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「SVM 只能處理線性問題」→ 錯，透過核函數（Kernel）可處理非線性。</span></div>
+      <div class="term-row"><span class="label">實務</span>像在兩群人中間畫一條最寬的走道，讓兩邊離走道都最遠。</div>
+    </div>
+  </details>
+
+  <details class="vocab">
+    <summary><span class="v-name">Wide and Deep 模型</span><span class="v-en">Wide and Deep</span></summary>
+    <div class="v-body">
+      <div class="term-row"><span class="label">白話</span>「Wide 記憶」＋「Deep 泛化」並用：既記住已知組合，又能推論沒看過的組合，常用於推薦系統。</div>
+      <div class="term-row"><span class="label">常考法</span>「推薦系統同時需要記憶與泛化能力」→ Wide and Deep。</div>
+      <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「Wide 負責泛化、Deep 負責記憶」→ 顛倒了，Wide＝記憶、Deep＝泛化。</span></div>
+      <div class="term-row"><span class="label">實務</span>老客戶推他買過的（記憶）＋新客戶推相似族群愛買的（泛化）。</div>
+    </div>
+  </details>
+
+  <div class="section-title sub"><span class="num">⬡</span>L113 易混淆比較</div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">② Supervised vs Unsupervised Learning</span></div>
+    <div class="compare-box">
+      <div class="compare-item"><div class="ci-head">監督式</div>資料有標準答案（標籤），學「輸入 → 答案」的規則。</div>
+      <div class="compare-item"><div class="ci-head">非監督式</div>資料沒有答案，模型自己找結構，最常見是分群。</div>
+    </div>
+    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">「非監督式需事先定義每筆資料的正確類別」→ 完全相反；「強化學習屬於監督式」→ 也是錯的。</span></div>
+    <div class="mnemonic">看有沒有「事先標好的答案」：有＝監督，沒有＝非監督。</div>
+  </div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">③ Classification vs Regression vs Clustering</span></div>
+    <div class="compare-box">
+      <div class="compare-item"><div class="ci-head">分類</div>預測類別（是／否、A/B/C），有標籤，監督式。</div>
+      <div class="compare-item"><div class="ci-head">回歸</div>預測連續數值（金額、銷量），有標籤，監督式。</div>
+      <div class="compare-item"><div class="ci-head">分群</div>自動把相似資料聚成群，沒有標籤，非監督式。</div>
+    </div>
+    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">「預測客戶會不會流失」放回歸當誘答（其實是分類）；「客戶分群」放分類當誘答（其實是非監督分群）。</span></div>
+    <div class="mnemonic">類別→分類；數字→回歸；沒答案自己分→分群。</div>
+  </div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">⑦ Overfitting vs Underfitting</span></div>
+    <div class="compare-box">
+      <div class="compare-item"><div class="ci-head">過擬合</div>訓練分數高、測試分數低：把訓練資料背起來了。</div>
+      <div class="compare-item"><div class="ci-head">欠擬合</div>訓練、測試分數都低：模型太簡單，根本沒學會。</div>
+    </div>
+    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">給「訓練99%、測試70%」問解法，選項放「增加模型複雜度」→ 會更糟；正解是簡化模型、增加資料、正則化。</span></div>
+    <div class="mnemonic">背考古題＝過擬合；沒讀書＝欠擬合。</div>
+  </div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">⑰ Data Drift vs Concept Drift</span></div>
+    <div class="compare-box">
+      <div class="compare-item"><div class="ci-head">Data Drift</div>輸入資料的「分布」變了：新客群的年齡、裝置不同。</div>
+      <div class="compare-item"><div class="ci-head">Concept Drift</div>輸入沒變，但輸入與輸出的「關係規律」變了：消費趨勢轉變，舊指標失效。</div>
+    </div>
+    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">兩者定義互換出題，抓關鍵字：資料本身變＝Data，規律關係變＝Concept。</span></div>
+    <div class="mnemonic">資料變了＝Data Drift；規律變了＝Concept Drift。</div>
+  </div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">⑲ CNN vs LSTM vs Transformer</span></div>
+    <div class="compare-box">
+      <div class="compare-item"><div class="ci-head">CNN</div>影像：抓局部特徵。瑕疵檢測、影像分類。</div>
+      <div class="compare-item"><div class="ci-head">LSTM</div>序列：記住前後順序。時間序列預測、舊式語言處理。</div>
+      <div class="compare-item"><div class="ci-head">Transformer</div>注意力機制同時看全局，LLM 的基礎架構。</div>
+    </div>
+    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">影像題放 LSTM、序列題放 CNN 互為誘答；「LLM 基於 CNN」也是常見錯誤選項。</span></div>
+    <div class="mnemonic">看圖→CNN；看順序→LSTM；看全局（LLM）→Transformer。</div>
+  </div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">⑳ Precision vs Recall</span></div>
+    <div class="compare-box">
+      <div class="compare-item"><div class="ci-head">Precision 精確率</div>「抓到的裡面有多少是對的」。誤報成本高時看它（垃圾郵件別誤殺正常信）。</div>
+      <div class="compare-item"><div class="ci-head">Recall 召回率</div>「該抓的抓到了多少」。漏抓成本高時看它（癌症篩檢寧可多驗不可漏掉）。</div>
+    </div>
+    <div class="term-row"><span class="label">怎麼騙你</span><span class="trap">給「不能漏掉病患」情境放 Precision 當誘答 → 怕漏掉選 Recall；怕誤殺選 Precision。</span></div>
+    <div class="mnemonic">怕抓錯→Precision；怕漏抓→Recall。</div>
+  </div>
+
+  <div class="section-title sub"><span class="num">⬡</span>L113 官方題型</div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">題型04｜Unsupervised Learning</span><span class="tc-en">非監督式</span></div>
+    <div class="term-row"><span class="label">常見情境</span>資料「沒有標籤」、想找出客戶分群、事先不知道分類標準。</div>
+    <div class="term-row"><span class="label">正確判斷</span>沒有標準答案可對照，模型自己找結構（分群），無法直接判斷對錯。</div>
+    <div class="term-row"><span class="label">錯誤選項</span><span class="trap">「需事先定義每筆資料的正確類別」「可直接計算預測準確率」。</span></div>
+    <div class="term-row"><span class="label">記憶</span><span class="mnemonic">沒標籤＝非監督＝自己分群。</span></div>
+  </div>
+
+  <div class="section-title sub"><span class="num">⬡</span>L113 補充內容</div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">三種學習類型比較</span></div>
+    <div class="compare-box">
+      <div class="compare-item"><div class="ci-head">監督式 Supervised</div>有標籤答案，做分類或預測數值</div>
+      <div class="compare-item"><div class="ci-head">非監督式 Unsupervised</div>沒標籤，自己找分群或結構</div>
+      <div class="compare-item"><div class="ci-head">強化式 Reinforcement</div>透過與環境互動、獎懲調整策略</div>
+    </div>
+    <div class="term-row" style="margin-top:8px;"><span class="label">陷阱</span><span class="trap">「非監督式不能準確判斷資料對錯」→ 非監督式沒有標準答案，無法直接做分類判斷，這是考試常見誤導。</span></div>
+    <div class="term-row"><span class="label">常考法</span>給一個情境描述，問哪種學習方式最適合：有歷史標記 = 監督式；沒有標記自行分群 = 非監督式；透過回饋調整路線/策略 = 強化式。</div>
+  </div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">半監督式學習</span><span class="tc-en">Semi-supervised Learning</span></div>
+    <div class="term-row"><span class="label">白話</span>同時用少量有標籤資料 + 大量無標籤資料訓練，最適合「只有部分資料有標注」的情境。</div>
+    <div class="term-row"><span class="label">常考法</span>農場 30% 影像有標注 + 70% 沒標注 → 半監督式最適合。</div>
+  </div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">CNN（卷積神經網路）</span><span class="tc-en">Convolutional Neural Network</span></div>
+    <div class="term-row"><span class="label">白話</span>最適合處理影像的神經網路架構，能自動學習圖片中的局部特徵（邊緣、形狀）。</div>
+    <div class="term-row"><span class="label">口訣</span><span class="mnemonic">看圖選CNN，聽序列選LSTM</span></div>
+  </div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">LSTM（長短期記憶網路）</span><span class="tc-en">Long Short-Term Memory</span></div>
+    <div class="term-row"><span class="label">白話</span>RNN 的改良版，能記住較長序列中的早期資訊，適合時序預測、語音辨識。</div>
+    <div class="term-row"><span class="label">陷阱</span><span class="trap">「RNN 長序列記憶困難」→ 用 LSTM 改善，不是用 CNN。</span></div>
+  </div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">VAE（變分自編碼器）</span><span class="tc-en">Variational Autoencoder</span></div>
+    <div class="term-row"><span class="label">白話</span>學習資料的分布規律後，可以生成新的、有變化的樣本，適合異常偵測和圖像生成。</div>
+    <div class="term-row"><span class="label">常考法</span>「缺乏異常標記資料時，要偵測與正常模式顯著不同的設備狀態」→ VAE 學習正常分佈，異常自然被偵測出來。</div>
+  </div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">Wide &amp; Deep 模型</span></div>
+    <div class="term-row"><span class="label">白話</span>同時有 Wide（記住過去已出現的特徵組合規律）和 Deep（對沒出現過的組合做合理預測）兩條路徑。</div>
+    <div class="term-row"><span class="label">常考法</span>資料同時有大量稀疏類別特徵 + 數值特徵，要「記住舊規律又能預測新組合」→ Wide &amp; Deep。</div>
+  </div>
+
+  <div class="term-card">
+    <div class="tc-head"><span class="tc-name">Softmax 函數</span></div>
+    <div class="term-row"><span class="label">白話</span>把模型輸出轉成各類別的機率分佈，所有類別機率加總＝1，適合多分類問題的輸出層。</div>
+    <div class="compare-box">
+      <div class="compare-item"><div class="ci-head">Softmax</div>多分類，輸出機率總和=1</div>
+      <div class="compare-item"><div class="ci-head">Sigmoid</div>二元分類，輸出單一機率</div>
+      <div class="compare-item"><div class="ci-head">ReLU</div>隱藏層常用激活函數，非輸出層</div>
     </div>
   </div>
 

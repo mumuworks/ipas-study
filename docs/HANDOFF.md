@@ -1,5 +1,72 @@
 # HANDOFF
 
+## 2026-07-10｜L113 第一階段內容重整
+
+本次任務只處理 `L113 機器學習概念`，沿用上一輪 L112 的整理方式，已修改 `index.html` 內容順序，但未修改 CSS、UI、JavaScript、題目文字，未 commit、未 push。
+
+已完成：
+
+- 將 L113 相關「必背名詞」搬回 `L113 機器學習概念` 章節內。
+- 將 L113 相關「易混淆比較」搬回 L113 章節內。
+- 將 L113 相關「官方題型」搬回 L113 章節內。
+- 將 L113 相關「補充內容」搬回 L113 章節內。
+- 從原本散落位置移除已搬移的重複內容。
+- 保留原有樣式 class 與 HTML 結構，不新增 CSS。
+- 保留原有 JavaScript 與 `localStorage` 進度功能。
+
+本次整合進 L113 的內容：
+
+- 監督式學習
+- 非監督式學習
+- 強化學習
+- 分類
+- 回歸
+- 分群
+- 訓練資料
+- 測試資料
+- 模型
+- 過擬合
+- 欠擬合
+- CNN
+- RNN
+- Transformer
+- VAE
+- Softmax
+- KNN
+- 決策樹
+- SVM
+- Wide and Deep
+- Supervised vs Unsupervised Learning
+- Classification vs Regression vs Clustering
+- Overfitting vs Underfitting
+- Data Drift vs Concept Drift
+- CNN vs LSTM vs Transformer
+- Precision vs Recall
+- 題型04｜Unsupervised Learning
+- 三種學習類型比較
+- 半監督式學習
+- LSTM
+
+本次未處理：
+
+- L111、L114、L121、L122、L123 的內容重整
+- 考試陷阱專區
+- 情境對照練習
+- 星級彙整表的關鍵字總覽
+- 題庫文字調整
+- UI 或功能調整
+
+注意事項：
+
+- 名詞庫原本的「機器學習」小節已因內容回歸 L113 而移除。
+- 高頻考點庫中的「機器學習類型」與「模型架構」補充段已回歸 L113。
+- 星級彙整表仍保留 L113 相關關鍵字，作為總複習索引，不視為重複教學卡片。
+- `Training Data vs Test Data` 比較仍保留在 L112，因它在 L112 的 Data Leakage脈絡中使用；L113 則補回「訓練資料 / 測試資料」完整名詞卡。
+
+下一個最適合任務：
+
+「確認 L113 重整後閱讀順序，再依同樣模式整理 L114 鑑別式 AI 與生成式 AI。」
+
 ## 2026-07-10｜L112 第一階段內容重整
 
 本次任務只處理 `L112 資料處理與分析概念`，已修改 `index.html` 內容順序，但未修改 CSS、UI、JS 功能、題庫文字，未 commit、未 push。
